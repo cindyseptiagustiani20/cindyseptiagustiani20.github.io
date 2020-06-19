@@ -1,0 +1,23 @@
+.judul {
+	width: 100%;
+	background-color: #E2E4EB;
+	padding-top: -5px;
+	padding-left: 3px;
+	padding-bottom: -5px;
+	margin-bottom: 10px;
+}
+.isi2 td{
+	height: 70px;
+}
+.j1, .j2 {
+	background-color: #E2E4EB;
+	text-align: center;
+}
+.j1 td {
+	text-align: center;
+}
+.j td {
+	background-color: #481C74;
+	color: white;
+	text-align: center;
+}
