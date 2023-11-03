@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #f4f4f4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 50px 20px;
+    height: 100vh;
+    background-color: #1A1A1D;
+}
+
+.header {
+    padding-top: 70px;
+}
+
+.header h1 {
+    text-align: center;
+    color: #C3073F;
+}
+
+.profile img {
+    padding: 10px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.desc {
+    color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    padding: 0 15%;
+}
+
+.desc h2 {
+    margin-bottom: 10px;
+    color: #C3073F;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 30px;
+    color: #4e4e50;
+}
+
+.social-media a {
+    margin: 0 10px;
+    font-size: 30px;
+    color: #4e4e50;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    /* padding: 10px 0; */
+    margin: 0;
+    font-size: 14px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 10px 0;
+    bottom: 0;
+    margin-left: -20px;
+}
