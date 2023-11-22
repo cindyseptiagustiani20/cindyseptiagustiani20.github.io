@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cindy Septi Agustiani's Blog | Struktur Data - Array</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/blog/blog_style.css">
+    <link rel="icon" href="../../../assets/img/foto.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Struktur Data</h1>
+        <h2>3. Array</h2>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pengertian')">Pengertian</button>
+                <button class="tablinks" onclick="openCity(event, 'Karakteristik')">Karakteristik Array</button>
+                <button class="tablinks" onclick="openCity(event, 'Hal')">Hal Yang Harus Diperhatikan</button>
+                <button class="tablinks" onclick="openCity(event, 'Jenis')">Jenis-jenis Array</button>
+                <button class="tablinks" onclick="openCity(event, 'SatuDimensi')">Array Satu Dimensi</button>
+                <button class="tablinks" onclick="openCity(event, 'DuaDimensi')">Array Dua Dimensi</button>
+                <button class="tablinks" onclick="openCity(event, 'TigaDimensi')">Array Tiga Dimensi</button>
+            </div>
+
+            <div id="Pengertian" class="tabcontent">
+                <h3>Pengertian Array</h3>
+
+                <p>Array adalah tipe data yang digunakan untuk menyimpan kumpulan data dengan tipe data yang sama.</p>
+                <br>
+                <p>Array/Larik merupakan Struktur Data Sederhana yang dapat didefinisikan sebagai pemesanan alokasi
+                    memory sementara pada komputer.Array dapat didefinisikan sebagai suatu himpunan hingga elemen yang
+                    terurut dan homogen</p>
+                <br>
+
+                <h4>Terurut</h4>
+                <p>Dapat diartikan bahwa elemen tersebut dapat diidentifikasi sebagai elemen pertama, elemen kedua dan
+                    seterusnya sampai elemen ke-n.</p>
+
+                <br>
+
+                <h4>Homogen</h4>
+                <p>Adalah bahwa setiap elemen dari sebuah Array tertentu haruslah mempunyai type data yang sama.</p>
+
+                <br>
+                <br>
+
+                <p>Sebuah Array dapat mempunyai elemen yang seluruhnya berupa integer atau character atau String bahkan
+                    dapat pula terjadi suatu Array mempunyai elemen berupa Array.
+                </p>
+            </div>
+
+            <div id="Karakteristik" class="tabcontent">
+                <h3>Karakteristik Array</h3>
+                <p>Array memiliki beberapa karakteristik, yaitu:</p>
+
+                <button class="accordion">Terurut</button>
+                <div class="panel">
+                    <p>Array adalah tipe data yang terurut. Artinya, setiap elemen array memiliki posisi yang
+                        berbeda-beda. Elemen pertama disebut dengan indeks 0, elemen kedua disebut dengan indeks 1, dan
+                        seterusnya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#terurut">https://www.petanikode.com/c-dasar/tipe-data/#terurut</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Homogen</button>
+                <div class="panel">
+                    <p>Array adalah tipe data yang homogen. Artinya, setiap elemen array memiliki tipe data yang sama.
+                        Tipe data yang digunakan dapat berupa tipe data primitif seperti int, float, double, char, dan
+                        sebagainya. Tipe data yang digunakan juga dapat berupa tipe data kompleks seperti string, array,
+                        pointer, structure, dan sebagainya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#homogen">https://www.petanikode.com/c-dasar/tipe
+                            -data/#homogen</a></p>
+                </div>
+
+                <button class="accordion">Statis</button>
+                <div class="panel">
+                    <p>Array adalah tipe data yang statis. Artinya, ukuran array harus dideklarasikan terlebih dahulu
+                        sebelum digunakan. Ukuran array tidak dapat diubah setelah dideklarasikan.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#statis">https://www.petanikode.com/c-dasar/tipe-data/#statis</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Dinamis</button>
+                <div class="panel">
+                    <p>Array adalah tipe data yang dinamis. Artinya, ukuran array dapat diubah setelah dideklarasikan.
+                        Ukuran array dapat diubah dengan menggunakan fungsi realloc().</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#dinamis">https://www.petanikode.com/c-dasar/tipe-data/#dinamis</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Terstruktur</button>
+                <div class="panel">
+                    <p>Array adalah tipe data yang terstruktur. Artinya, array dapat menyimpan data dengan tipe data
+                        yang berbeda-beda. Data yang disimpan dapat berupa data primitif seperti int, float, double,
+                        char, dan sebagainya. Data yang disimpan juga dapat berupa data kompleks seperti string, array,
+                        pointer, structure, dan sebagainya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#terstruktur">https://www.petanikode.com/c-dasar/tipe-data/#terstruktur</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Abstrak</button>
+                <div class="panel">
+                    <p>Array adalah tipe data yang abstrak. Artinya, array tidak dapat diakses secara langsung oleh
+                        programmer. Array hanya dapat diakses melalui indeksnya saja.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#abstrak">https://www.petanikode.com/c-dasar/tipe-data/#abstrak</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="Hal" class="tabcontent">
+                <h3>Hal Yang Harus Diperhatikan</h3>
+                <p>Hal yang harus diperhatikan dalam mendeklarasikan array, yaitu:</p>
+
+                <button class="accordion">Ukuran Array</button>
+                <div class="panel">
+                    <p>Ukuran array harus dideklarasikan terlebih dahulu sebelum digunakan. Ukuran array tidak dapat
+                        diubah setelah dideklarasikan.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#ukuran-array">https://www.petanikode.com/c-dasar/tipe-data/#ukuran-array</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Tipe Data</button>
+                <div class="panel">
+                    <p>Tipe data yang digunakan harus sama. Tipe data yang digunakan dapat berupa tipe data primitif
+                        seperti int, float, double, char, dan sebagainya. Tipe data yang digunakan juga dapat berupa
+                        tipe data kompleks seperti string, array, pointer, structure, dan sebagainya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Inisialisasi</button>
+                <div class="panel">
+                    <p>Array dapat diinisialisasi saat deklarasi. Array juga dapat diinisialisasi setelah deklarasi.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#inisialisasi">https://www.petanikode.com/c-dasar/tipe-data/#inisialisasi</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Akses Elemen</button>
+                <div class="panel">
+                    <p>Array hanya dapat diakses melalui indeksnya saja. Array tidak dapat diakses secara langsung oleh
+                        programmer.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#akses-elemen">https://www.petanikode.com/c-dasar/tipe-data/#akses-elemen</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Ukuran Array</button>
+                <div class="panel">
+                    <p>Ukuran array harus dideklarasikan terlebih dahulu sebelum digunakan. Ukuran array tidak dapat
+                        diubah setelah dideklarasikan.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#ukuran-array">https://www.petanikode.com/c-dasar/tipe-data/#ukuran-array</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Tipe Data</button>
+                <div class="panel">
+                    <p>Tipe data yang digunakan harus sama. Tipe data yang digunakan dapat berupa tipe data primitif
+                        seperti int, float, double, char, dan sebagainya. Tipe data yang digunakan juga dapat berupa
+                        tipe data kompleks seperti string, array, pointer, structure, dan sebagainya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Inisialisasi</button>
+                <div class="panel">
+                    <p>Array dapat diinisialisasi saat deklarasi. Array juga dapat diinisialisasi setelah deklarasi.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#inisialisasi">https://www.petanikode.com/c-dasar/tipe-data/#inisialisasi</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="Jenis" class="tabcontent">
+                <h3>Jenis-jenis Array</h3>
+                <p>Array memiliki beberapa jenis, yaitu:</p>
+
+                <button class="accordion">Array Satu Dimensi</button>
+                <div class="panel">
+                    <p>Array satu dimensi adalah array yang memiliki satu indeks. Array satu dimensi juga disebut
+                        sebagai
+                        array linear.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-satu-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-satu-dimensi</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Array Dua Dimensi</button>
+                <div class="panel">
+                    <p>Array dua dimensi adalah array yang memiliki dua indeks. Array dua dimensi juga disebut sebagai
+                        array matriks.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-dua-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-dua-dimensi</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Array Tiga Dimensi</button>
+                <div class="panel">
+                    <p>Array tiga dimensi adalah array yang memiliki tiga indeks. Array tiga dimensi juga disebut
+                        sebagai
+                        array kubus.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-tiga-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-tiga-dimensi</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="SatuDimensi" class="tabcontent">
+                <h3>Array Satu Dimensi</h3>
+                <p>Array satu dimensi adalah array yang memiliki satu indeks. Array satu dimensi juga disebut sebagai
+                    array linear.</p>
+
+                <button class="accordion">Rumus</button>
+                <div class="panel">
+                    <p>int jumlah_elemen = sizeof(nama_array) / sizeof(tipe_data);</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-satu-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-satu-dimensi</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Pemetaan (Mapping) Array Satu Dimensi Ke Storage</button>
+                <div class="panel">
+                    <p>Array satu dimensi dapat digambarkan sebagai berikut:</p>
+                    <p><b>Rumus : @A[i] = B + (i – 1) * L
+                        </b></p>
+
+                    <p><b>A</b> = Nama Array</p>
+                    <p><b>i</b> = Indeks Array</p>
+                    <p><b>B</b> = Basis Array</p>
+                    <p><b>L</b> = Ukuran Elemen Array</p>
+
+
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-satu-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-satu-dimensi</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh</button>
+                <div class="panel">
+                    <p>Contoh array satu dimensi adalah sebagai berikut:</p>
+                    <p>int angka[5];</p>
+                    <p>char huruf[5];</p>
+                    <p>float bilangan[5];</p>
+                    <p>double bilangan[5];</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-satu-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-satu-dimensi</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="DuaDimensi" class="tabcontent">
+                <h3>Array Dua Dimensi</h3>
+                <p>Array dua dimensi adalah array yang memiliki dua indeks. Array dua dimensi juga disebut sebagai
+                    array matriks.</p>
+
+                <button class="accordion">Rumus</button>
+                <div class="panel">
+                    <p>int jumlah_elemen = sizeof(nama_array) / sizeof(tipe_data);</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-dua-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-dua-dimensi</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Pemetaan (Mapping) Array Dua Dimensi Ke Storage</button>
+                <div class="panel">
+                    <p>Array dua dimensi dapat digambarkan sebagai berikut:</p>
+                    <p><b>Rumus : @A[i][j] = B + (i – 1) * L + (j – 1) * C
+                        </b></p>
+
+                    <p><b>A</b> = Nama Array</p>
+                    <p><b>i</b> = Indeks Array Pertama</p>
+                    <p><b>j</b> = Indeks Array Kedua</p>
+                    <p><b>B</b> = Basis Array</p>
+                    <p><b>L</b> = Ukuran Elemen Array Pertama</p>
+                    <p><b>C</b> = Ukuran Elemen Array Kedua</p>
+
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-dua-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-dua-dimensi</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh</button>
+                <div class="panel">
+                    <p>Contoh array dua dimensi adalah sebagai berikut:</p>
+                    <p>int angka[5][5];</p>
+                    <p>char huruf[5][5];</p>
+                    <p>float bilangan[5][5];</p>
+                    <p>double bilangan[5][5];</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-dua-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-dua-dimensi</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="TigaDimensi" class="tabcontent">
+                <h3>Array Tiga Dimensi</h3>
+                <p>Array tiga dimensi adalah array yang memiliki tiga indeks. Array tiga dimensi juga disebut sebagai
+                    array kubus.</p>
+
+                <button class="accordion">Rumus</button>
+                <div class="panel">
+                    <p>int jumlah_elemen = sizeof(nama_array) / sizeof(tipe_data);</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-tiga-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-tiga-dimensi</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Pemetaan (Mapping) Array Tiga Dimensi Ke Storage</button>
+                <div class="panel">
+                    <p>Array tiga dimensi dapat digambarkan sebagai berikut:</p>
+                    <p><b>Rumus : @A[i][j][k] = B + (i – 1) * L + (j – 1) * C + (k – 1) * D
+                        </b></p>
+
+                    <p><b>A</b> = Nama Array</p>
+                    <p><b>i</b> = Indeks Array Pertama</p>
+                    <p><b>j</b> = Indeks Array Kedua</p>
+                    <p><b>k</b> = Indeks Array Ketiga</p>
+                    <p><b>B</b> = Basis Array</p>
+                    <p><b>L</b> = Ukuran Elemen Array Pertama</p>
+                    <p><b>C</b> = Ukuran Elemen Array Kedua</p>
+                    <p><b>D</b> = Ukuran Elemen Array Ketiga</p>
+
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-tiga-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-tiga-dimensi</a>
+                    </p>
+
+                </div>
+
+                <button class="accordion">Contoh</button>
+                <div class="panel">
+                    <p>Contoh array tiga dimensi adalah sebagai berikut:</p>
+                    <p>int angka[5][5][5];</p>
+                    <p>char huruf[5][5][5];</p>
+                    <p>float bilangan[5][5][5];</p>
+                    <p>double bilangan[5][5][5];</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array-tiga-dimensi">https://www.petanikode.com/c-dasar/tipe-data/#array-tiga-dimensi</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="flex justify-center my-6">
+                    <img src="../../../assets/img/foto.png" alt="Cindy Septi Agustiani"
+                        class="rounded-full w-[150px] h-auto">
+                </div>
+                <p>Nama saya Cindy Septi Agustiani. Saya adalah mahasiswa Teknik Informatika di Sekolah Tinggi Teknologi
+                    Bandung.</p>
+                <br>
+                <div class="flex justify-center">
+                    <a href="https://cindyseptiagustiani20.github.io/" target="_blank"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Another Post</h3>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Stack</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Stack adalah struktur data yang digunakan untuk menyimpan data dengan
+                            prinsip LIFO (Last In First Out).</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/stack"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+                
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Queue</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Queue atau antrian adalah struktur data yang menerapkan prinsip operasi dimana elemen data yang masuk pertama akan keluar lebih dulu. Prinsip ini dikenal dengan istilah FIFO (First In, First Out)</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/queue"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-6">
+                    <a href="https://cindyseptiagustiani20.github.io/my_blog"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More Post
+                    </a>
+                </div>
+
+            </div>
+            <div class="card h-auto">
+                <h3>Follow Me</h3>
+
+                <div class="social-media flex justify-center pb-[50px]">
+                    <a href="https://github.com/cindyseptiagustiani20" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/cindysepti_20?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://gitlab.com/cindyseptiagustiani" target="_blank"><i class="fab fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/cindy-septi-agustiani/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-2 fixed bottom-0 w-full bg-[#1a1a1d] text-center text-[#C3073F] ml-[0px]">
+        <p>&copy; 2023 Cindy Septi Agustiani</p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // accordion with jquery
+        $(document).ready(function () {
+            $(".accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var panel = $(this).next();
+
+                if (panel.css("display") == "block") {
+                    panel.css("display", "none");
+                } else {
+                    panel.css("display", "block");
+                }
+
+                $(".accordion").not(this).removeClass("active");
+                $(".panel").not(panel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tablinks").first().addClass("active");
+            $(".tabcontent").first().css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
