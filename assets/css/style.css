@@ -390,6 +390,10 @@ h6 {
     margin: auto;
 }
 
+#about_me {
+    height: auto!important;
+}
+
 #skill {
     height: auto!important;
     padding-bottom: 0px!important;
