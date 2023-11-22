@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cindy Septi Agustiani's Blog | Struktur Data - Tipe Data</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/blog/blog_style.css">
+    <link rel="icon" href="../../../assets/img/foto.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Struktur Data</h1>
+        <h2>2. Tipe Data</h2>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pengertian')">Pengertian</button>
+                <button class="tablinks" onclick="openCity(event, 'Jenis')">Jenis-jenis Tipe Data</button>
+                <button class="tablinks" onclick="openCity(event, 'BilReal')">Tipe Bilangan Real</button>
+                <button class="tablinks" onclick="openCity(event, 'Character')">Tipe Data Karakter</button>
+                <button class="tablinks" onclick="openCity(event, 'Boolean')">Tipe Data Boolean</button>
+                <button class="tablinks" onclick="openCity(event, 'ADT')">Tipe Data Bentukan</button>
+                <button class="tablinks" onclick="openCity(event, 'Macam')">Macam-macam Tipe Data</button>
+            </div>
+
+            <div id="Pengertian" class="tabcontent">
+                <h3>Pengertian Tipe Data</h3>
+
+                <p>Tipe data adalah jenis data yang tersimpan pada variabel. Tipe data menentukan ukuran dan jenis data
+                    yang dapat disimpan pada variabel. Tipe data juga menentukan operasi apa saja yang dapat dilakukan
+                    pada variabel tersebut.</p>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/">https://www.petanikode.com/c-dasar/tipe-data/</a>
+
+                </p>
+            </div>
+
+            <div id="Jenis" class="tabcontent">
+                <h3>Jenis-jenis Tipe Data</h3>
+                <p>Berikut merupakan beberapa jenis tipe data</p>
+
+                <button class="accordion">Boolean</button>
+                <div class="panel">
+                    <p>Tipe data boolean adalah tipe data yang hanya memiliki dua nilai, yaitu true dan false. Nilai
+                        true
+                        dapat diartikan sebagai 1, sedangkan false dapat diartikan sebagai 0.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#boolean">https://www.petanikode.com/c-dasar/tipe-data/#boolean</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Character</button>
+                <div class="panel">
+                    <p>Tipe data character adalah tipe data yang digunakan untuk menyimpan karakter. Karakter yang
+                        disimpan
+                        dapat berupa huruf, angka, simbol, dan karakter khusus lainnya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#character">https://www.petanikode.com/c-dasar/tipe-data/#character</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Byte</button>
+                <div class="panel">
+                    <p>Tipe data byte adalah tipe data yang digunakan untuk menyimpan bilangan bulat yang memiliki
+                        rentang
+                        nilai yang sama dengan tipe data char. Tipe data byte memiliki ukuran 1 byte atau 8 bit.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#byte">https://www.petanikode.com/c-dasar/tipe-data/#byte</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Short</button>
+                <div class="panel">
+                    <p>Tipe data short adalah tipe data yang digunakan untuk menyimpan bilangan bulat yang memiliki
+                        rentang
+                        nilai yang lebih besar dari tipe data byte. Tipe data short memiliki ukuran 2 byte atau 16 bit.
+                    </p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#short">https://www.petanikode.com/c-dasar/tipe-data/#short</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Int</button>
+                <div class="panel">
+                    <p>Tipe data int adalah tipe data yang digunakan untuk menyimpan bilangan bulat yang memiliki
+                        rentang
+                        nilai yang lebih besar dari tipe data short. Tipe data int memiliki ukuran 4 byte atau 32 bit.
+                    </p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#int">https://www.petanikode.com/c-dasar/tipe-data/#int</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Long</button>
+                <div class="panel">
+                    <p>Tipe data long adalah tipe data yang digunakan untuk menyimpan bilangan bulat yang memiliki
+                        rentang
+                        nilai yang lebih besar dari tipe data int. Tipe data long memiliki ukuran 8 byte atau 64 bit.
+                    </p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#long">https://www.petanikode.com/c-dasar/tipe-data/#long</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Float</button>
+                <div class="panel">
+                    <p>Tipe data float adalah tipe data yang digunakan untuk menyimpan bilangan pecahan yang memiliki
+                        rentang nilai yang lebih besar dari tipe data long. Tipe data float memiliki ukuran 4 byte atau
+                        32
+                        bit.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#float">https://www.petanikode.com/c-dasar/tipe-data/#float</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Double</button>
+                <div class="panel">
+                    <p>Tipe data double adalah tipe data yang digunakan untuk menyimpan bilangan pecahan yang memiliki
+                        rentang nilai yang lebih besar dari tipe data float. Tipe data double memiliki ukuran 8 byte
+                        atau
+                        64 bit.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#double">https://www.petanikode.com/c-dasar/tipe-data/#double</a>
+                    </p>
+                </div>
+
+                <button class="accordion">String</button>
+                <div class="panel">
+                    <p>Tipe data string adalah tipe data yang digunakan untuk menyimpan kumpulan karakter. Karakter
+                        yang
+                        disimpan dapat berupa huruf, angka, simbol, dan karakter khusus lainnya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#string">https://www.petanikode.com/c-dasar/tipe-data/#string</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Array</button>
+                <div class="panel">
+                    <p>Tipe data array adalah tipe data yang digunakan untuk menyimpan kumpulan data dengan tipe data
+                        yang
+                        sama. Data yang disimpan dapat berupa data primitif seperti int, float, double, char, dan
+                        sebagainya. Data yang disimpan juga dapat berupa data kompleks seperti string, array, pointer,
+                        structure, dan sebagainya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#array">https://www.petanikode.com/c-dasar/tipe-data/#array</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Pointer</button>
+                <div class="panel">
+                    <p>Tipe data pointer adalah tipe data yang digunakan untuk menyimpan alamat memori dari variabel
+                        lain.
+                        Pointer menyimpan alamat memori dari variabel lain, bukan nilai dari variabel tersebut.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#pointer">https://www.petanikode.com/c-dasar/tipe-data/#pointer</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Structure</button>
+                <div class="panel">
+                    <p>Tipe data structure adalah tipe data yang digunakan untuk menyimpan kumpulan data dengan tipe
+                        data
+                        yang berbeda. Data yang disimpan dapat berupa data primitif seperti int, float, double, char,
+                        dan
+                        sebagainya. Data yang disimpan juga dapat berupa data kompleks seperti string, array, pointer,
+                        structure, dan sebagainya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#structure">https://www.petanikode.com/c-dasar/tipe-data/#structure</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Union</button>
+                <div class="panel">
+                    <p>Tipe data union adalah tipe data yang digunakan untuk menyimpan kumpulan data dengan tipe data
+                        yang
+                        berbeda. Data yang disimpan dapat berupa data primitif seperti int, float, double, char, dan
+                        sebagainya. Data yang disimpan juga dapat berupa data kompleks seperti string, array, pointer,
+                        structure, dan sebagainya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#union">https://www.petanikode.com/c-dasar/tipe-data/#union</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Enumeration</button>
+                <div class="panel">
+                    <p>Tipe data enumeration adalah tipe data yang digunakan untuk menyimpan kumpulan data dengan tipe
+                        data
+                        yang berbeda. Data yang disimpan dapat berupa data primitif seperti int, float, double, char,
+                        dan
+                        sebagainya. Data yang disimpan juga dapat berupa data kompleks seperti string, array, pointer,
+                        structure, dan sebagainya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#enumeration">https://www.petanikode.com/c-dasar/tipe-data/#enumeration</a>
+                    </p>
+                </div>
+
+                <button class="accordion">File</button>
+                <div class="panel">
+                    <p>Tipe data file adalah tipe data yang digunakan untuk menyimpan kumpulan data dengan tipe data
+                        yang
+                        berbeda. Data yang disimpan dapat berupa data primitif seperti int, float, double, char, dan
+                        sebagainya. Data yang disimpan juga dapat berupa data kompleks seperti string, array, pointer,
+                        structure, dan sebagainya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#file">https://www.petanikode.com/c-dasar/tipe-data/#file</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="BilReal" class="tabcontent">
+                <h3>Tipe Bilangan Real</h3>
+                <p>Tipe data bilangan real adalah tipe data yang digunakan untuk menyimpan bilangan pecahan. Tipe data
+                    bilangan real terdiri dari tipe data float dan double.</p>
+                <p>Tipe data ini akan memiliki keterangan jangkauan, jumlah digit penting (berarti) dan ukuran. Digit
+                    berarti ini penting diperhatikan karena ini berhubungan dengan tingkat ketelitian data yang
+                    disajikan</p>
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#bilangan-real">https://www.petanikode.com/c-dasar/tipe-data/#bilangan-real</a>
+                </p>
+            </div>
+
+            <div id="Character" class="tabcontent">
+                <h3>Tipe Data Karakter</h3>
+                <p>Tipe data karakter adalah tipe data yang digunakan untuk menyimpan karakter. Karakter yang disimpan
+                    dapat berupa huruf, angka, simbol, dan karakter khusus lainnya.</p>
+
+                <button class="accordion">Char</button>
+                <div class="panel">
+                    <p>Contoh tipe data karakter adalah sebagai berikut:</p>
+                    <p>char karakter = 'A';</p>
+                    <p>char karakter = '1';</p>
+                    <p>char karakter = '@';</p>
+                    <p>char karakter = ' '; // spasi</p>
+                    <p>char karakter = '\n'; // baris baru</p>
+                    <p>char karakter = '\t'; // tab</p>
+                    <p>char karakter = '\0'; // null</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-karakter">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-karakter</a>
+                    </p>
+                </div>
+
+                <button class="accordion">String</button>
+                <div class="panel">
+                    <p>Tipe data string adalah tipe data yang digunakan untuk menyimpan kumpulan karakter. Karakter
+                        yang
+                        disimpan dapat berupa huruf, angka, simbol, dan karakter khusus lainnya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#string">https://www.petanikode.com/c-dasar/tipe-data/#string</a>
+                    </p>
+                </div>
+
+                <button class="accordion">String[x]</button>
+                <div class="panel">
+                    <p>Tipe data string[x] adalah tipe data yang digunakan untuk menyimpan kumpulan karakter dengan
+                        panjang
+                        maksimal x. Karakter yang disimpan dapat berupa huruf, angka, simbol, dan karakter khusus
+                        lainnya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#string">https://www.petanikode.com/c-dasar/tipe-data/#string</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="Boolean" class="tabcontent">
+                <h3>Tipe Data Boolean</h3>
+                <p>Tipe data boolean adalah tipe data yang hanya memiliki dua nilai, yaitu true dan false. Nilai true
+                    dapat diartikan sebagai 1, sedangkan false dapat diartikan sebagai 0.</p>
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#boolean">https://www.petanikode.com/c-dasar/tipe-data/#boolean</a>
+                </p>
+            </div>
+
+            <div id="ADT" class="tabcontent">
+                <h3>Tipe Data Bentukan</h3>
+                <p>Tipe data bentukan adalah tipe data yang digunakan untuk menyimpan kumpulan data dengan tipe data
+                    yang
+                    berbeda. Data yang disimpan dapat berupa data primitif seperti int, float, double, char, dan
+                    sebagainya. Data yang disimpan juga dapat berupa data kompleks seperti string, array, pointer,
+                    structure, dan sebagainya.</p>
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-bentukan">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-bentukan</a>
+                </p>
+            </div>
+
+            <div id="Macam" class="tabcontent">
+                <h3>Macam-macam Tipe Data</h3>
+                <p>Berikut merupakan beberapa macam tipe data</p>
+
+                <button class="accordion">Tipe Data Primitif</button>
+                <div class="panel">
+                    <p>Tipe data primitif adalah tipe data yang sudah tersedia di dalam bahasa pemrograman. Tipe data
+                        primitif juga disebut sebagai tipe data bawaan (built-in data type).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-primitif">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-primitif</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Tipe Data Non-Primitif</button>
+                <div class="panel">
+                    <p>Tipe data non-primitif adalah tipe data yang dibuat oleh programmer. Tipe data non-primitif
+                        juga
+                        disebut sebagai tipe data buatan (user-defined data type).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-non-primitif">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-non-primitif</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Tipe Data Statik</button>
+                <div class="panel">
+                    <p>Tipe data statik adalah tipe data yang tidak dapat diubah setelah dideklarasikan. Tipe data
+                        statik
+                        juga disebut sebagai tipe data konstan (constant data type).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-statik">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-statik</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Tipe Data Dinamis</button>
+                <div class="panel">
+                    <p>Tipe data dinam
+                        is adalah tipe data yang dapat diubah setelah dideklarasikan. Tipe data dinamis juga disebut
+                        sebagai tipe data variabel (variable data type).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-dinamis">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-dinamis</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Tipe Data Homogen</button>
+                <div class="panel">
+                    <p>Tipe data homogen adalah tipe data yang hanya dapat menyimpan satu jenis data saja. Tipe data
+                        homogen juga disebut sebagai tipe data sederhana (simple data type).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-homogen">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-homogen</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Tipe Data Heterogen</button>
+                <div class="panel">
+                    <p>Tipe data heterogen adalah tipe data yang dapat menyimpan beberapa jenis data sekaligus.
+                        Tipe data heterogen juga disebut sebagai tipe data kompleks (complex data type).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-heterogen">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-heterogen</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Tipe Data Terstruktur</button>
+                <div class="panel">
+                    <p>Tipe data terstruktur adalah tipe data yang terdiri dari beberapa tipe data lainnya.
+                        Tipe data terstruktur juga disebut sebagai tipe data majemuk (compound data type).
+                    </p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-terstruktur">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-terstruktur</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Tipe Data Abstrak</button>
+                <div class="panel">
+                    <p>Tipe data abstrak adalah tipe data yang tidak dapat diakses secara langsung oleh
+                        programmer. Tipe data abstrak juga disebut sebagai tipe data abstrak (abstract
+                        data type).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-abstrak">https://www.petanikode.com/c-dasar/tipe-data/#tipe-data-abstrak</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="flex justify-center my-6">
+                    <img src="../../../assets/img/foto.png" alt="Cindy Septi Agustiani"
+                        class="rounded-full w-[150px] h-auto">
+                </div>
+                <p>Nama saya Cindy Septi Agustiani. Saya adalah mahasiswa Teknik Informatika di Sekolah Tinggi Teknologi
+                    Bandung.</p>
+                <br>
+                <div class="flex justify-center">
+                    <a href="https://cindyseptiagustiani20.github.io/" target="_blank"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Another Post</h3>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Array</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Array adalah tipe data yang digunakan untuk menyimpan kumpulan data dengan
+                            tipe data yang sama.</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/array"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Stack</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Stack adalah struktur data yang digunakan untuk menyimpan data dengan prinsip LIFO (Last In First Out).</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/stack"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-6">
+                    <a href="https://cindyseptiagustiani20.github.io/my_blog" class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More Post
+                    </a>
+                </div>
+
+            </div>
+            <div class="card h-auto">
+                <h3>Follow Me</h3>
+
+                <div class="social-media flex justify-center pb-[50px]">
+                    <a href="https://github.com/cindyseptiagustiani20" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/cindysepti_20?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://gitlab.com/cindyseptiagustiani" target="_blank"><i class="fab fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/cindy-septi-agustiani/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-2 fixed bottom-0 w-full bg-[#1a1a1d] text-center text-[#C3073F] ml-[0px]">
+        <p>&copy; 2023 Cindy Septi Agustiani</p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // accordion with jquery
+        $(document).ready(function () {
+            $(".accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var panel = $(this).next();
+
+                if (panel.css("display") == "block") {
+                    panel.css("display", "none");
+                } else {
+                    panel.css("display", "block");
+                }
+
+                $(".accordion").not(this).removeClass("active");
+                $(".panel").not(panel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tablinks").first().addClass("active");
+            $(".tabcontent").first().css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
