@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cindy Septi Agustiani's Blog | Struktur Data - Queue</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/blog/blog_style.css">
+    <link rel="icon" href="../../../assets/img/foto.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Struktur Data</h1>
+        <h2>5. Queue</h2>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pengertian')">Pengertian</button>
+                <button class="tablinks" onclick="openCity(event, 'QueueStack')">Perbedaan Queue Dan Stack</button>
+                <button class="tablinks" onclick="openCity(event, 'Enqueue')">Enqueue</button>
+                <button class="tablinks" onclick="openCity(event, 'Dequeue')">Dequeue</button>
+                <button class="tablinks" onclick="openCity(event, 'Ilustrasi')">Ilustrasi Queue</button>
+                <button class="tablinks" onclick="openCity(event, 'Karakteristik')">Karakteristik Queue</button>
+                <button class="tablinks" onclick="openCity(event, 'FrontRear')">Front dan Rear</button>
+                <button class="tablinks" onclick="openCity(event, 'Status')">Status Queue</button>
+                <button class="tablinks" onclick="openCity(event, 'Operasi')">Operasi Queue</button>
+                <button class="tablinks" onclick="openCity(event, 'Jenis')">Jenis-jenis Queue</button>
+                <button class="tablinks" onclick="openCity(event, 'Fungsi')">Fungsi Queue</button>
+                <button class="tablinks" onclick="openCity(event, 'Kelebihan')">Kelebihan Queue</button>
+                <button class="tablinks" onclick="openCity(event, 'Kekurangan')">Kekurangan Queue</button>
+            </div>
+
+            <div id="Pengertian" class="tabcontent">
+                <h3>Pengertian Queue</h3>
+
+                <p>Queue atau antrian adalah struktur data yang menerapkan prinsip operasi dimana elemen data yang masuk
+                    pertama akan keluar lebih dulu. Prinsip ini dikenal dengan istilah FIFO (First In, First Out).</p>
+
+                <p>Queue (antrian) adalah struktur data dimana proses pengambilan dan penambahan element dilakukan pada
+                    ujung yang berbeda.</p>
+
+                <p>Queue memiliki dua operasi utama, yaitu:</p>
+
+                <button class="accordion">Enqueue</button>
+                <div class="panel">
+                    <p>Enqueue adalah operasi untuk menambahkan data ke dalam queue.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#enqueue">https://www.petanikode.com/c-dasar/tipe-data/#enqueue</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Dequeue</button>
+
+                <div class="panel">
+                    <p>Dequeue adalah operasi untuk mengambil data dari queue.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#dequeue">https://www.petanikode.com/c-dasar/tipe-data/#dequeue</a>
+                    </p>
+                </div>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#queue">https://www.petanikode.com/c-dasar/tipe-data/#queue</a>
+                </p>
+            </div>
+
+            <div id="QueueStack" class="tabcontent">
+                <h3>Perbedaan Queue Dan Stack</h3>
+                <p>Perbedaan queue dan stack adalah sebagai berikut:</p>
+
+                <button class="accordion">Queue</button>
+                <div class="panel">
+                    <p>Queue adalah struktur data yang menerapkan prinsip operasi dimana elemen data yang masuk pertama
+                        akan keluar lebih dulu. Prinsip ini dikenal dengan istilah FIFO (First In, First Out).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#queue">https://www.petanikode.com/c-dasar/tipe-data/#queue</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Stack</button>
+                <div class="panel">
+                    <p>Stack adalah struktur data yang menerapkan prinsip operasi dimana elemen data yang masuk terakhir
+                        akan keluar lebih dulu. Prinsip ini dikenal dengan istilah LIFO (Last In, First Out).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#stack">https://www.petanikode.com/c-dasar/tipe-data/#stack</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="Enqueue" class="tabcontent">
+                <h3>Enqueue</h3>
+                <p>Enqueue adalah operasi untuk menambahkan data ke dalam queue.</p>
+
+                <p>Penambahan dilakukan pada bagian belakang.</p>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#enqueue">https://www.petanikode.com/c-dasar/tipe-data/#enqueue</a>
+                </p>
+            </div>
+
+            <div id="Dequeue" class="tabcontent">
+                <h3>Dequeue</h3>
+                <p>Dequeue adalah operasi untuk mengambil data dari queue.</p>
+
+                <p>Pengambilan dilakukan pada bagian depan.</p>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#dequeue">https://www.petanikode.com/c-dasar/tipe-data/#dequeue</a>
+                </p>
+            </div>
+
+            <div id="Ilustrasi" class="tabcontent">
+                <h3>Ilustrasi Queue</h3>
+                <p>Ilustrasi queue adalah sebagai berikut:</p>
+
+                <div class="flex justify-center">
+                    <img src="../../../assets/img/data_structure/queue/queue.png" alt="Ilustrasi Queue"
+                        class="w-[500px] h-auto">
+                </div>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#ilustrasi-queue">https://www.petanikode.com/c-dasar/tipe-data/#ilustrasi-queue</a>
+                </p>
+            </div>
+
+            <div id="Karakteristik" class="tabcontent">
+                <h3>Karakteristik Stack</h3>
+                <p>Karakteristik stack yang harus diperhatikan, yaitu:</p>
+
+                <button class="accordion">LIFO</button>
+                <div class="panel">
+                    <p>LIFO adalah prinsip operasi dimana elemen data yang masuk terakhir akan keluar lebih dulu.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#lifo">https://www.petanikode.com/c-dasar/tipe-data/#lifo</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Push</button>
+                <div class="panel">
+                    <p>Push adalah operasi untuk menambahkan data ke dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#push">https://www.petanikode.com/c-dasar/tipe-data/#push</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Pop</button>
+                <div class="panel">
+                    <p>Pop adalah operasi untuk mengambil data dari stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#pop">https://www.petanikode.com/c-dasar/tipe-data/#pop</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Top</button>
+                <div class="panel">
+                    <p>Top adalah operasi untuk melihat data teratas dari stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#top">https://www.petanikode.com/c-dasar/tipe-data/#top</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Empty</button>
+                <div class="panel">
+                    <p>Empty adalah operasi untuk mengecek apakah stack kosong atau tidak.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#empty">https://www.petanikode.com/c-dasar/tipe-data/#empty</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Full</button>
+                <div class="panel">
+                    <p>Full adalah operasi untuk mengecek apakah stack penuh atau tidak.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#full">https://www.petanikode.com/c-dasar/tipe-data/#full</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Size</button>
+                <div class="panel">
+                    <p>Size adalah operasi untuk mengetahui jumlah data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#size">https://www.petanikode.com/c-dasar/tipe-data/#size</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Clear</button>
+                <div class="panel">
+                    <p>Clear adalah operasi untuk menghapus semua data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#clear">https://www.petanikode.com/c-dasar/tipe-data/#clear</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Print</button>
+                <div class="panel">
+                    <p>Print adalah operasi untuk menampilkan semua data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#print">https://www.petanikode.com/c-dasar/tipe-data/#print</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="FrontRear" class="tabcontent">
+                <h3>Front dan Rear</h3>
+                <p>Front dan rear adalah dua variabel yang digunakan untuk menyimpan posisi data di dalam queue.</p>
+
+                <p>Front adalah variabel yang digunakan untuk menyimpan posisi data terdepan dari queue.</p>
+
+                <p>Rear adalah variabel yang digunakan untuk menyimpan posisi data terbelakang dari queue.</p>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#front-dan-rear">https://www.petanikode.com/c-dasar/tipe-data/#front-dan-rear</a>
+                </p>
+            </div>
+
+            <div id="Status" class="tabcontent">
+                <h3>Status Queue</h3>
+                <p>Status queue yang harus diperhatikan, yaitu:</p>
+
+                <button class="accordion">Queue Overflow</button>
+                <div class="panel">
+                    <p>Queue overflow terjadi ketika queue penuh dan operasi enqueue dilakukan.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#queue-overflow">https://www.petanikode.com/c-dasar/tipe-data/#queue-overflow</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Queue Underflow</button>
+                <div class="panel">
+                    <p>Queue underflow terjadi ketika queue kosong dan operasi dequeue dilakukan.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#queue-underflow">https://www.petanikode.com/c-dasar/tipe-data/#queue-underflow</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="Operasi" class="tabcontent">
+                <h3>Operasi Queue</h3>
+                <p>Operasi-operasi dalam queue adalah sebagai berikut:</p>
+
+                <button class="accordion">Enqueue</button>
+                <div class="panel">
+                    <p>Enqueue adalah operasi untuk menambahkan data ke dalam queue.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#enqueue">https://www.petanikode.com/c-dasar/tipe-data/#enqueue</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Dequeue</button>
+                <div class="panel">
+                    <p>Dequeue adalah operasi untuk mengambil data dari queue.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#dequeue">https://www.petanikode.com/c-dasar/tipe-data/#dequeue</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Front</button>
+                <div class="panel">
+                    <p>Front adalah operasi untuk melihat data terdepan dari queue.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#front">https://www.petanikode.com/c-dasar/tipe-data/#front</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Rear</button>
+                <div class="panel">
+                    <p>Rear adalah operasi untuk melihat data terbelakang dari queue.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#rear">https://www.petanikode.com/c-dasar/tipe-data/#rear</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Empty</button>
+                <div class="panel">
+                    <p>Empty adalah operasi untuk mengecek apakah queue kosong atau tidak.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#empty">https://www.petanikode.com/c-dasar/tipe-data/#empty</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Full</button>
+                <div class="panel">
+                    <p>Full adalah operasi untuk mengecek apakah queue penuh atau tidak.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#full">https://www.petanikode.com/c-dasar/tipe-data/#full</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Size</button>
+                <div class="panel">
+                    <p>Size adalah operasi untuk mengetahui jumlah data yang ada di dalam queue.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#size">https://www.petanikode.com/c-dasar/tipe-data/#size</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Clear</button>
+                <div class="panel">
+                    <p>Clear adalah operasi untuk menghapus semua data yang ada di dalam queue.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#clear">https://www.petanikode.com/c-dasar/tipe-data/#clear</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Print</button>
+                <div class="panel">
+                    <p>Print adalah operasi untuk menampilkan semua data yang ada di dalam queue.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#print">https://www.petanikode.com/c-dasar/tipe-data/#print</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="Jenis" class="tabcontent">
+                <h3>Jenis-jenis Queue</h3>
+                <p>Jenis-jenis queue adalah sebagai berikut:</p>
+
+                <button class="accordion">Linear Queue</button>
+                <div class="panel">
+                    <p>Linear queue adalah queue yang menggunakan array sebagai representasi datanya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#linear-queue">https://www.petanikode.com/c-dasar/tipe-data/#linear-queue</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Circular Queue</button>
+                <div class="panel">
+                    <p>Circular queue adalah queue yang menggunakan array sebagai representasi datanya. Pada circular
+                        queue, posisi rear akan kembali ke awal setelah mencapai akhir array.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#circular-queue">https://www.petanikode.com/c-dasar/tipe-data/#circular-queue</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Priority Queue</button>
+                <div class="panel">
+                    <p>Priority queue adalah queue yang menyimpan data dengan prioritas tertentu.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#priority-queue">https://www.petanikode.com/c-dasar/tipe-data/#priority-queue</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Double Ended Queue</button>
+                <div class="panel">
+                    <p>Double ended queue adalah queue yang dapat melakukan operasi enqueue dan dequeue pada kedua
+                        ujungnya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#double-ended-queue">https://www.petanikode.com/c-dasar/tipe-data/#double-ended-queue</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Deque</button>
+                <div class="panel">
+                    <p>Deque adalah queue yang dapat melakukan operasi enqueue dan dequeue pada kedua ujungnya.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#deque">https://www.petanikode.com/c-dasar/tipe-data/#deque</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Priority Deque</button>
+                <div class="panel">
+                    <p>Priority deque adalah queue yang dapat melakukan operasi enqueue dan dequeue pada kedua ujungnya
+                        dan menyimpan data dengan prioritas tertentu.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#priority-deque">https://www.petanikode.com/c-dasar/tipe-data/#priority-deque</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="Fungsi" class="tabcontent">
+                <h3>Fungsi Queue</h3>
+                <p>Fungsi queue adalah sebagai berikut:</p>
+
+                <button class="accordion">Antrian</button>
+                <div class="panel">
+                    <p>Queue dapat digunakan untuk menyelesaikan permasalahan yang membutuhkan prinsip FIFO (First In
+                        First Out).</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#antrian">https://www.petanikode.com/c-dasar/tipe-data/#antrian</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Antrian Prioritas</button>
+                <div class="panel">
+                    <p>Queue dapat digunakan untuk menyelesaikan permasalahan yang membutuhkan prinsip antrian dengan
+                        prioritas tertentu.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#antrian-prioritas">https://www.petanikode.com/c-dasar/tipe-data/#antrian-prioritas</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Antrian Ganda</button>
+                <div class="panel">
+                    <p>Queue dapat digunakan untuk menyelesaikan permasalahan yang membutuhkan prinsip antrian dengan
+                        dua ujung.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#antrian-ganda">https://www.petanikode.com/c-dasar/tipe-data/#antrian-ganda</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="Kelebihan" class="tabcontent">
+                <h3>Kelebihan Queue</h3>
+                <p>Kelebihan queue adalah sebagai berikut:</p>
+
+                <ul class="list-disc list-inside">
+                    <li>Queue dapat digunakan untuk menyelesaikan permasalahan yang membutuhkan prinsip FIFO (First In
+                        First Out).</li>
+                    <li>Queue dapat digunakan untuk menyelesaikan permasalahan yang membutuhkan prinsip antrian dengan
+                        prioritas tertentu.</li>
+                    <li>Queue dapat digunakan untuk menyelesaikan permasalahan yang membutuhkan prinsip antrian dengan
+                        dua ujung.</li>
+                    <li>Data dalam jumlah besar dapat dikelola secara efisien.
+                    </li>
+                    <li>Operasi seperti penyisipan dan penghapusan dapat dilakukan dengan mudah karena mengikuti aturan masuk pertama keluar pertama.
+                    </li>
+                    <li>Queue berguna ketika layanan tertentu digunakan oleh banyak konsumen.
+                    </li>
+                    <li>Queue cepat untuk komunikasi antar-proses data.
+                    </li>
+                    <li>Queue dapat digunakan dalam implementasi struktur data lainnya.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="Kekurangan" class="tabcontent">
+                <h3>Kekurangan Queue</h3>
+                <p>Kekurangan queue adalah sebagai berikut:</p>
+
+                <ul class="list-disc list-inside">
+                    <li>Operasi seperti penyisipan dan penghapusan elemen dari tengah cenderung banyak memakan waktu.
+                    </li>
+                    <li>Dalam queue konvensional, elemen baru hanya dapat dimasukkan ketika elemen yang ada dihapus dari antrian.
+                    </li>
+                    <li>Mencari elemen data pada struktur queue membutuhkan time complexity O(N).
+                    </li>
+                    <li>Ukuran maksimum antrian harus ditentukan sebelumnya.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="flex justify-center my-6">
+                    <img src="../../../assets/img/foto.png" alt="Cindy Septi Agustiani"
+                        class="rounded-full w-[150px] h-auto">
+                </div>
+                <p>Nama saya Cindy Septi Agustiani. Saya adalah mahasiswa Teknik Informatika di Sekolah Tinggi Teknologi
+                    Bandung.</p>
+                <br>
+                <div class="flex justify-center">
+                    <a href="https://cindyseptiagustiani20.github.io/" target="_blank"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Another Post</h3>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">List</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">List adalah struktur data yang digunakan untuk menyimpan sekumpulan
+                            data. List memiliki dua jenis, yaitu singly linked list dan doubly linked list</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/list"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Pengenalan Struktur Data</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Struktur data adalah cara menyimpan dan mengorganisir data di dalam komputer agar dapat digunakan dengan efisien dan efektif</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/data_structure"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-6">
+                    <a href="https://cindyseptiagustiani20.github.io/my_blog"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More Post
+                    </a>
+                </div>
+
+            </div>
+            <div class="card h-auto">
+                <h3>Follow Me</h3>
+
+                <div class="social-media flex justify-center pb-[50px]">
+                    <a href="https://github.com/cindyseptiagustiani20" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/cindysepti_20?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://gitlab.com/cindyseptiagustiani" target="_blank"><i class="fab fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/cindy-septi-agustiani/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-2 fixed bottom-0 w-full bg-[#1a1a1d] text-center text-[#C3073F] ml-[0px]">
+        <p>&copy; 2023 Cindy Septi Agustiani</p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // accordion with jquery
+        $(document).ready(function () {
+            $(".accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var panel = $(this).next();
+
+                if (panel.css("display") == "block") {
+                    panel.css("display", "none");
+                } else {
+                    panel.css("display", "block");
+                }
+
+                $(".accordion").not(this).removeClass("active");
+                $(".panel").not(panel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tablinks").first().addClass("active");
+            $(".tabcontent").first().css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
