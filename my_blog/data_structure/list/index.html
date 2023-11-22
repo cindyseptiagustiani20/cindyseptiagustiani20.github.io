@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cindy Septi Agustiani's Blog | Struktur Data - List</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/blog/blog_style.css">
+    <link rel="icon" href="../../../assets/img/foto.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Struktur Data</h1>
+        <h2>6. List</h2>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pengertian')">Pengertian</button>
+                <button class="tablinks" onclick="openCity(event, 'Ilustrasi')">Ilustrasi List</button>
+                <button class="tablinks" onclick="openCity(event, 'ArrayLinkedList')">Perbedaan Karakteristik Array Dan
+                    Linked List</button>
+                <button class="tablinks" onclick="openCity(event, 'PointerLinkedList')">Konsep Pointer dan Linked
+                    List</button>
+                <button class="tablinks" onclick="openCity(event, 'StatisDinamis')">Perbedaan Perubah Statis Dan
+                    Dinamis</button>
+                <button class="tablinks" onclick="openCity(event, 'Pointer')">Deklarasi Pointer</button>
+                <button class="tablinks" onclick="openCity(event, 'Keuntungan')">Keuntungan List</button>
+                <button class="tablinks" onclick="openCity(event, 'Jenis')">Jenis Link List</button>
+                <button class="tablinks" onclick="openCity(event, 'Operasi')">Operasi Pada List</button>
+            </div>
+
+            <div id="Pengertian" class="tabcontent">
+                <h3>Pengertian List</h3>
+
+                <p>List adalah struktur data yang digunakan untuk menyimpan sekumpulan data. List memiliki dua jenis,
+                    yaitu singly linked list dan doubly linked list.</p>
+
+                <p>List merupakan sebuah pemikiran/konsep struktur data yang sangat dasar pada pemrograman agar lebih
+                    fleksibel.</p>
+
+                <p>Setiap elemen akan ditambahkan saat dibutuhkan, tidak dialokasikan dengan tempat tertentu dari awal.
+                </p>
+
+                <p>Linked List adalah salah satu bentuk struktur data, berisi kumpulan data (node) yang tersusun secara
+                    sekuensial, saling sambung-menyambung dan dinamis.</p>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#list">https://www.petanikode.com/c-dasar/tipe-data/#list</a>
+                </p>
+            </div>
+
+            <div id="Ilustrasi" class="tabcontent">
+                <h3>Ilustrasi List</h3>
+                <p>Ilustrasi list adalah sebagai berikut:</p>
+
+                <div class="flex justify-center">
+                    <img src="../../../assets/img/data_structure/list/List.png" alt="Ilustrasi List"
+                        class="w-[500px] h-auto">
+                </div>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#ilustrasi-list">https://www.petanikode.com/c-dasar/tipe-data/#ilustrasi-list</a>
+                </p>
+            </div>
+
+            <div id="ArrayLinkedList" class="tabcontent">
+                <h3>Perbedaan Karakteristik Array dan Linked List</h3>
+                <p>Perbedaan karakteristik array dan linked list adalah sebagai berikut:</p>
+
+                <div class="flex justify-center">
+                    <table class="table-auto">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2">Array</th>
+                                <th class="px-4 py-2">Linked List</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2">Array adalah struktur data yang menyimpan data secara
+                                    terindeks.</td>
+                                <td class="border px-4 py-2">Linked List adalah struktur data yang menyimpan data
+                                    secara terindeks.</td>
+                            </tr>
+                            <tr class="bg-red-500">
+                                <td class="border px-4 py-2">Array memiliki ukuran yang tetap.</td>
+                                <td class="border px-4 py-2">Linked List memiliki ukuran yang dinamis.</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">Array memiliki alokasi memori yang statis.</td>
+                                <td class="border px-4 py-2">Linked List memiliki alokasi memori yang dinamis.</td>
+                            </tr>
+                            <tr class="bg-red-500">
+                                <td class="border px-4 py-2">Array memiliki akses yang cepat.</td>
+                                <td class="border px-4 py-2">Linked List memiliki akses yang lambat.</td>
+                            </tr>
+                            <tr>
+                                <td class="border px-4 py-2">Array memiliki alokasi memori yang statis.</td>
+                                <td class="border px-4 py-2">Linked List memiliki alokasi memori yang dinamis.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="PointerLinkedList" class="tabcontent">
+                <h3>Konsep Pointer dan Linked List</h3>
+                <p>Pointer adalah variabel yang berisi alamat memori dari variabel lain. Pointer menyimpan alamat dari
+                    variabel lain.</p>
+
+                <p>Linked List adalah struktur data yang terdiri dari node-node yang saling terhubung. Setiap node
+                    memiliki data dan pointer yang menunjuk ke node berikutnya.</p>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#pointer">https://www.petanikode.com/c-dasar/tipe-data/#pointer</a>
+                </p>
+            </div>
+
+            <div id="StatisDinamis" class="tabcontent">
+                <h3>Perbedaan Perubah Statis Dan Dinamis</h3>
+
+                <button class="accordion">Statis</button>
+                <div class="panel">
+                    <p>Isi Memory pada lokasi tertentu (nilai perubah) adalah data sesungguhnya yang akan diolah. </p>
+                </div>
+
+                <button class="accordion">Dinamis</button>
+                <div class="panel">
+                    <p>Nilai perubah adalah alamat lokasi lain yang menyimpan data sesungguhnya. Dengan demikian data
+                        yang sesungguhnya dapat dimasukkan secara langsung.
+                    </p>
+                </div>
+            </div>
+
+            <div id="Pointer" class="tabcontent">
+                <h3>Deklarasi Pointer</h3>
+
+                <p>Pointer digunakan sebagai penunjuk ke suatu alamat memori</p>
+                <p>Dalam pemrograman C++, Type Data Pointer
+                    dideklarasikan dengan bentuk umum :</p>
+                <p><b>type_data *nama_variabel;</b></p>
+
+                <p>Type Data dapat berupa sembarang type data, misalnya char, int atau float. Sedangkan Nama variabel
+                    merupakan nama variabel pointer.</p>
+            </div>
+
+            <div id="Keuntungan" class="tabcontent">
+                <h3>Keuntungan List</h3>
+
+                <p>Keuntungan list adalah sebagai berikut:</p>
+
+                <ul class="list-disc list-inside">
+                    <li>Penggunaan memori yang dinamik (Kita dapat mengatur penggunaan memori sehingga bisa lebih
+                        hemat).</li>
+                    <li>Penambahan dan penghapusan elemen lebih mudah.</li>
+                    <li>Ukuran list bisa berubah-ubah.</li>
+                    <li>Alamat elemen pertama dari suatu list, dapat diacu oleh First(L).</li>
+                    <li>Nilai yang dibawanya dapat diacu dengan info(P).</li>
+                </ul>
+            </div>
+
+            <div id="Jenis" class="tabcontent">
+                <h3>Jenis Link List</h3>
+
+                <p>Jenis link list adalah sebagai berikut:</p>
+
+                <button class="accordion">Singly Linked List</button>
+                <div class="panel">
+                    <p>Singly Linked List adalah jenis linked list yang paling sederhana. Setiap node menyimpan data
+                        dan alamat dari node berikutnya.</p>
+                </div>
+
+                <button class="accordion">Doubly Linked List</button>
+                <div class="panel">
+                    <p>Doubly Linked List adalah jenis linked list yang setiap node menyimpan data dan alamat dari node
+                        sebelumnya dan node berikutnya.</p>
+                </div>
+
+                <button class="accordion">Circular Linked List</button>
+                <div class="panel">
+                    <p>Circular Linked List adalah jenis linked list yang setiap node menyimpan data dan alamat dari
+                        node berikutnya. Pada jenis linked list ini, node terakhir akan menunjuk ke node pertama.</p>
+                </div>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#jenis-linked-list">https://www.petanikode.com/c-dasar/tipe-data/#jenis-linked-list</a>
+                </p>
+            </div>
+
+            <div id="Operasi" class="tabcontent">
+                <h3>Operasi Pada List</h3>
+
+                <p>Operasi pada list adalah sebagai berikut:</p>
+
+                <button class="accordion">Create</button>
+                <div class="panel">
+                    <p>Operasi create adalah operasi untuk membuat list kosong.</p>
+                </div>
+
+                <button class="accordion">Insert</button>
+                <div class="panel">
+                    <p>Operasi insert adalah operasi untuk menambahkan elemen baru pada list.</p>
+                </div>
+
+                <button class="accordion">Delete</button>
+                <div class="panel">
+                    <p>Operasi delete adalah operasi untuk menghapus elemen pada list.</p>
+                </div>
+
+                <button class="accordion">Update</button>
+                <div class="panel">
+                    <p>Operasi update adalah operasi untuk mengubah elemen pada list.</p>
+                </div>
+
+                <button class="accordion">Read</button>
+                <div class="panel">
+                    <p>Operasi read adalah operasi untuk menampilkan elemen pada list.</p>
+                </div>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#operasi-pada-linked-list">https://www.petanikode.com/c-dasar/tipe-data/#operasi-pada-linked-list</a>
+                </p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="flex justify-center my-6">
+                    <img src="../../../assets/img/foto.png" alt="Cindy Septi Agustiani"
+                        class="rounded-full w-[150px] h-auto">
+                </div>
+                <p>Nama saya Cindy Septi Agustiani. Saya adalah mahasiswa Teknik Informatika di Sekolah Tinggi Teknologi
+                    Bandung.</p>
+                <br>
+                <div class="flex justify-center">
+                    <a href="https://cindyseptiagustiani20.github.io/" target="_blank"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Another Post</h3>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Pengenalan Struktur Data</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Struktur data adalah cara menyimpan dan mengorganisir data di dalam
+                            komputer agar dapat digunakan dengan efisien dan efektif</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/data_structure"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Tipe Data</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Tipe Data adalah jenis data yang tersimpan dalam variabel.</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/data_type"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-6">
+                    <a href="https://cindyseptiagustiani20.github.io/my_blog"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More Post
+                    </a>
+                </div>
+
+            </div>
+            <div class="card h-auto">
+                <h3>Follow Me</h3>
+
+                <div class="social-media flex justify-center pb-[50px]">
+                    <a href="https://github.com/cindyseptiagustiani20" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/cindysepti_20?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://gitlab.com/cindyseptiagustiani" target="_blank"><i class="fab fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/cindy-septi-agustiani/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-2 fixed bottom-0 w-full bg-[#1a1a1d] text-center text-[#C3073F] ml-[0px]">
+        <p>&copy; 2023 Cindy Septi Agustiani</p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // accordion with jquery
+        $(document).ready(function () {
+            $(".accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var panel = $(this).next();
+
+                if (panel.css("display") == "block") {
+                    panel.css("display", "none");
+                } else {
+                    panel.css("display", "block");
+                }
+
+                $(".accordion").not(this).removeClass("active");
+                $(".panel").not(panel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tablinks").first().addClass("active");
+            $(".tabcontent").first().css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
