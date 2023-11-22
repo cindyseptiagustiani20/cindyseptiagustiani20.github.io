@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cindy Septi Agustiani's Blog | Struktur Data - Stack</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/blog/blog_style.css">
+    <link rel="icon" href="../../../assets/img/foto.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Struktur Data</h1>
+        <h2>4. Stack</h2>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pengertian')">Pengertian</button>
+                <button class="tablinks" onclick="openCity(event, 'Ilustrasi')">Ilustrasi Stack</button>
+                <button class="tablinks" onclick="openCity(event, 'Karakteristik')">Karakteristik Stack</button>
+                <button class="tablinks" onclick="openCity(event, 'Kondisi')">Kondisi Stack</button>
+                <button class="tablinks" onclick="openCity(event, 'RepresentasiStatis')">Stack Representasi
+                    Statis</button>
+                <button class="tablinks" onclick="openCity(event, 'RepresentasiDinamis')">Stack Representasi
+                    Dinamis</button>
+                <button class="tablinks" onclick="openCity(event, 'Operator')">Operator-operator Dalam Stack</button>
+                <button class="tablinks" onclick="openCity(event, 'Penggunaan')">Penggunaan Stack</button>
+                <button class="tablinks" onclick="openCity(event, 'MatchingParentheses')">Matching Parentheses</button>
+                <button class="tablinks" onclick="openCity(event, 'InterpreterPostfix')">Interpreter Postfix</button>
+                <button class="tablinks" onclick="openCity(event, 'NotasiInfixPostfix')">Notasi Infix Dan
+                    Postfix</button>
+                <button class="tablinks" onclick="openCity(event, 'NotasiPostfix')">Notasi Postfix</button>
+                <button class="tablinks" onclick="openCity(event, 'AturanPostfix')">Aturan Proses Transformasi ke
+                    Postfix</button>
+                <button class="tablinks" onclick="openCity(event, 'StackArray')">Stack Pada Array</button>
+            </div>
+
+            <div id="Pengertian" class="tabcontent">
+                <h3>Pengertian Stack</h3>
+
+                <p>Stack adalah struktur data yang digunakan untuk menyimpan data dengan prinsip LIFO (Last In First
+                    Out). Prinsip ini berarti data yang terakhir masuk akan menjadi data pertama yang keluar.</p>
+
+                <p>Stack dapat digambarkan sebagai tumpukan buku. Buku yang terakhir ditumpuk akan menjadi buku yang
+                    pertama diambil.</p>
+
+                <p>Stack dapat diimplementasikan dengan menggunakan array atau linked list.</p>
+
+                <p>Stack memiliki dua operasi utama, yaitu push dan pop. Operasi push digunakan untuk menambahkan data
+                    ke dalam stack. Operasi pop digunakan untuk mengambil data dari stack.</p>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#stack">https://www.petanikode.com/c-dasar/tipe-data/#stack</a>
+            </div>
+
+            <div id="Ilustrasi" class="tabcontent">
+                <h3>Ilustrasi Stack</h3>
+                <p>Ilustrasi stack adalah sebagai berikut:</p>
+
+                <div class="flex justify-center">
+                    <img src="../../../assets/img/data_structure/stack/stack.png" alt="Ilustrasi Stack"
+                        class="w-[500px] h-auto">
+                </div>
+
+                <p>Referensi: <a
+                        href="https://www.petanikode.com/c-dasar/tipe-data/#stack">https://www.petanikode.com/c-dasar/tipe-data/#stack</a>
+                </p>
+            </div>
+
+            <div id="Karakteristik" class="tabcontent">
+                <h3>Karakteristik Stack</h3>
+                <p>Karakteristik stack adalah sebagai berikut:</p>
+
+                <button class="accordion">Push</button>
+                <div class="panel">
+                    <p>Push adalah operasi untuk menambahkan data ke dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#push">https://www.petanikode.com/c-dasar/tipe-data/#push</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Pop</button>
+                <div class="panel">
+                    <p>Pop adalah operasi untuk mengambil data dari stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#pop">https://www.petanikode.com/c-dasar/tipe-data/#pop</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Top</button>
+                <div class="panel">
+                    <p>Top adalah operasi untuk melihat data teratas dari stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#top">https://www.petanikode.com/c-dasar/tipe-data/#top</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Empty</button>
+                <div class="panel">
+                    <p>Empty adalah operasi untuk mengecek apakah stack kosong atau tidak.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#empty">https://www.petanikode.com/c-dasar/tipe-data/#empty</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Full</button>
+                <div class="panel">
+                    <p>Full adalah operasi untuk mengecek apakah stack penuh atau tidak.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#full">https://www.petanikode.com/c-dasar/tipe-data/#full</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Size</button>
+                <div class="panel">
+                    <p>Size adalah operasi untuk mengetahui jumlah data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#size">https://www.petanikode.com/c-dasar/tipe-data/#size</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Clear</button>
+                <div class="panel">
+                    <p>Clear adalah operasi untuk menghapus semua data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#clear">https://www.petanikode.com/c-dasar/tipe-data/#clear</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Print</button>
+                <div class="panel">
+                    <p>Print adalah operasi untuk menampilkan semua data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#print">https://www.petanikode.com/c-dasar/tipe-data/#print</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="Kondisi" class="tabcontent">
+                <h3>Kondisi Stack</h3>
+                <p>Kondisi stack yang harus diperhatikan, yaitu:</p>
+
+                <button class="accordion">Stack Overflow</button>
+                <div class="panel">
+                    <p>Stack overflow terjadi ketika stack penuh dan operasi push dilakukan.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#stack-overflow">https://www.petanikode.com/c-dasar/tipe-data/#stack-overflow</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Stack Underflow</button>
+                <div class="panel">
+                    <p>Stack underflow terjadi ketika stack kosong dan operasi pop dilakukan.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#stack-underflow">https://www.petanikode.com/c-dasar/tipe-data/#stack-underflow</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="RepresentasiStatis" class="tabcontent">
+                <h3>Stack Representasi Statis</h3>
+                <p>Stack dapat direpresentasikan dengan menggunakan array. Array yang digunakan harus memiliki ukuran
+                    yang tetap.</p>
+
+                <p>Stack memiliki dua variabel, yaitu:</p>
+
+                <button class="accordion">Top</button>
+                <div class="panel">
+                    <p>Top adalah variabel yang digunakan untuk menyimpan indeks data teratas dari stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#top">https://www.petanikode.com/c-dasar/tipe-data/#top</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Data</button>
+                <div class="panel">
+                    <p>Data adalah variabel yang digunakan untuk menyimpan data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#data">https://www.petanikode.com/c-dasar/tipe-data/#data</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh</button>
+                <div class="panel">
+                    <p>Contoh stack representasi statis adalah sebagai berikut:</p>
+                    <p>int stack[5];</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#stack-representasi-statis">https://www.petanikode.com/c-dasar/tipe-data/#stack-representasi-statis</a>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+            <div id="RepresentasiDinamis" class="tabcontent">
+                <h3>Stack Representasi Dinamis</h3>
+                <p>Stack dapat direpresentasikan dengan menggunakan linked list. Linked list yang digunakan dapat
+                    memiliki ukuran yang berubah-ubah.</p>
+
+                <p>Stack memiliki dua variabel, yaitu:</p>
+
+                <button class="accordion">Top</button>
+                <div class="panel">
+                    <p>Top adalah variabel yang digunakan untuk menyimpan indeks data teratas dari stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#top">https://www.petanikode.com/c-dasar/tipe-data/#top</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Data</button>
+                <div class="panel">
+                    <p>Data adalah variabel yang digunakan untuk menyimpan data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#data">https://www.petanikode.com/c-dasar/tipe-data/#data</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh</button>
+                <div class="panel">
+                    <p>Contoh stack representasi dinamis adalah sebagai berikut:</p>
+                    <p>struct Node {</p>
+                    <p>int data;</p>
+                    <p>struct Node* next;</p>
+                    <p>};</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#stack-representasi-dinamis">https://www.petanikode.com/c-dasar/tipe-data/#stack-representasi-dinamis</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="Operator" class="tabcontent">
+                <h3>Operator-operator Dalam Stack</h3>
+                <p>Operator-operator dalam stack adalah sebagai berikut:</p>
+
+                <button class="accordion">Push</button>
+                <div class="panel">
+                    <p>Push adalah operasi untuk menambahkan data ke dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#push">https://www.petanikode.com/c-dasar/tipe-data/#push</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Pop</button>
+                <div class="panel">
+                    <p>Pop adalah operasi untuk mengambil data dari stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#pop">https://www.petanikode.com/c-dasar/tipe-data/#pop</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Top</button>
+                <div class="panel">
+                    <p>Top adalah operasi untuk melihat data teratas dari stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#top">https://www.petanikode.com/c-dasar/tipe-data/#top</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Empty</button>
+                <div class="panel">
+                    <p>Empty adalah operasi untuk mengecek apakah stack kosong atau tidak.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#empty">https://www.petanikode.com/c-dasar/tipe-data/#empty</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Full</button>
+                <div class="panel">
+                    <p>Full adalah operasi untuk mengecek apakah stack penuh atau tidak.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#full">https://www.petanikode.com/c-dasar/tipe-data/#full</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Size</button>
+                <div class="panel">
+                    <p>Size adalah operasi untuk mengetahui jumlah data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#size">https://www.petanikode.com/c-dasar/tipe-data/#size</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Clear</button>
+                <div class="panel">
+                    <p>Clear adalah operasi untuk menghapus semua data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#clear">https://www.petanikode.com/c-dasar/tipe-data/#clear</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Print</button>
+                <div class="panel">
+                    <p>Print adalah operasi untuk menampilkan semua data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#print">https://www.petanikode.com/c-dasar/tipe-data/#print</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="Penggunaan" class="tabcontent">
+                <h3>Penggunaan Stack</h3>
+                <p>Stack dapat digunakan untuk menyelesaikan permasalahan yang membutuhkan prinsip LIFO (Last In First
+                    Out).</p>
+
+                <p>Contoh permasalahan yang dapat diselesaikan dengan stack adalah sebagai berikut:</p>
+
+                <button class="accordion">Balik Kata</button>
+                <div class="panel">
+                    <p>Contoh permasalahan balik kata adalah sebagai berikut:</p>
+                    <p>Input: "Petani Kode"</p>
+                    <p>Output: "edoK inateP"</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#balik-kata">https://www.petanikode.com/c-dasar/tipe-data/#balik-kata</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Balik Kalimat</button>
+                <div class="panel">
+                    <p>Contoh permasalahan balik kalimat adalah sebagai berikut:</p>
+                    <p>Input: "Petani Kode"</p>
+                    <p>Output: "edoK inateP"</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#balik-kalimat">https://www.petanikode.com/c-dasar/tipe-data/#balik-kalimat</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Balik Angka</button>
+                <div class="panel">
+                    <p>Contoh permasalahan balik angka adalah sebagai berikut:</p>
+                    <p>Input: 12345</p>
+                    <p>Output: 54321</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#balik-angka">https://www.petanikode.com/c-dasar/tipe-data/#balik-angka</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="MatchingParentheses" class="tabcontent">
+                <h3>Matching Parentheses</h3>
+                <p>Matching parentheses adalah permasalahan untuk mengecek apakah tanda kurung yang ada di dalam suatu
+                    kalimat sudah sesuai atau belum.</p>
+
+                <p>Contoh permasalahan matching parentheses adalah sebagai berikut:</p>
+
+                <button class="accordion">Contoh 1</button>
+                <div class="panel">
+                    <p>Input: "((()))"</p>
+                    <p>Output: "Valid"</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-1">https://www.petanikode.com/c-dasar/tipe-data/#contoh-1</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh 2</button>
+                <div class="panel">
+                    <p>Input: "(()))"</p>
+                    <p>Output: "Invalid"</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-2">https://www.petanikode.com/c-dasar/tipe-data/#contoh-2</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh 3</button>
+                <div class="panel">
+                    <p>Input: "(()()()())"</p>
+                    <p>Output: "Valid"</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-3">https://www.petanikode.com/c-dasar/tipe-data/#contoh-3</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh 4</button>
+                <div class="panel">
+                    <p>Input: "(()()()()"</p>
+                    <p>Output: "Invalid"</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-4">https://www.petanikode.com/c-dasar/tipe-data/#contoh-4</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="InterpreterPostfix" class="tabcontent">
+                <h3>Interpreter Postfix</h3>
+                <p>Interpreter postfix adalah permasalahan untuk menghitung hasil dari suatu ekspresi postfix.</p>
+
+                <p>Contoh permasalahan interpreter postfix adalah sebagai berikut:</p>
+
+                <button class="accordion">Contoh 1</button>
+                <div class="panel">
+                    <p>Input: "2 3 +"</p>
+                    <p>Output: 5</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-1">https://www.petanikode.com/c-dasar/tipe-data/#contoh-1</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh 2</button>
+                <div class="panel">
+                    <p>Input: "2 3 4 + *"</p>
+                    <p>Output: 14</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-2">https://www.petanikode.com/c-dasar/tipe-data/#contoh-2</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh 3</button>
+                <div class="panel">
+                    <p>Input: "2 3 4 + * 5 -"</p>
+                    <p>Output: 9</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-3">https://www.petanikode.com/c-dasar/tipe-data/#contoh-3</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="NotasiInfixPostfix" class="tabcontent">
+                <h3>Notasi Infix Dan Postfix</h3>
+                <p>Notasi infix adalah notasi yang biasa digunakan dalam operasi matematika. Notasi infix memiliki
+                    operator di antara operand-nya.</p>
+
+                <p>Contoh notasi infix adalah sebagai berikut:</p>
+
+                <button class="accordion">Contoh 1</button>
+                <div class="panel">
+                    <p>2 + 3</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-1">https://www.petanikode.com/c-dasar/tipe-data/#contoh-1</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh 2</button>
+                <div class="panel">
+                    <p>2 + 3 * 4</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-2">https://www.petanikode.com/c-dasar/tipe-data/#contoh-2</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh 3</button>
+                <div class="panel">
+                    <p>(2 + 3) * 4</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-3">https://www.petanikode.com/c-dasar/tipe-data/#contoh-3</a>
+                    </p>
+                </div>
+
+                <p>Notasi postfix adalah notasi yang biasa digunakan dalam operasi matematika. Notasi postfix memiliki
+                    operator di belakang operand-nya.</p>
+
+                <p>Contoh notasi postfix adalah sebagai berikut:</p>
+
+                <button class="accordion">Contoh 1</button>
+                <div class="panel">
+                    <p>2 3 +</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-1">https://www.petanikode.com/c-dasar/tipe-data/#contoh-1</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="NotasiPostFix" class="tabcontent">
+                <h3>Notasi Postfix</h3>
+                <p>Notasi postfix adalah notasi yang biasa digunakan dalam operasi matematika. Notasi postfix memiliki
+                    operator di belakang operand-nya.</p>
+
+                <p>Contoh notasi postfix adalah sebagai berikut:</p>
+
+                <button class="accordion">Contoh 1</button>
+                <div class="panel">
+                    <p>2 3 +</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-1">https://www.petanikode.com/c-dasar/tipe-data/#contoh-1</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh 2</button>
+                <div class="panel">
+                    <p>2 3 4 + *</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-2">https://www.petanikode.com/c-dasar/tipe-data/#contoh-2</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh 3</button>
+                <div class="panel">
+                    <p>2 3 4 + * 5 -</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#contoh-3">https://www.petanikode.com/c-dasar/tipe-data/#contoh-3</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="AturanPostfix" class="tabcontent">
+                <h3>Aturan Proses Transformasi ke Postfix</h3>
+                <p>Aturan proses transformasi ke postfix adalah sebagai berikut:</p>
+
+                <button class="accordion">Aturan 1</button>
+                <div class="panel">
+                    <p>Operand langsung ditulis ke dalam postfix.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#aturan-1">https://www.petanikode.com/c-dasar/tipe-data/#aturan-1</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Aturan 2</button>
+                <div class="panel">
+                    <p>Operator ditulis ke dalam stack jika stack kosong.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#aturan-2">https://www.petanikode.com/c-dasar/tipe-data/#aturan-2</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Aturan 3</button>
+                <div class="panel">
+                    <p>Operator ditulis ke dalam stack jika operator sebelumnya adalah kurung buka.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#aturan-3">https://www.petanikode.com/c-dasar/tipe-data/#aturan-3</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Aturan 4</button>
+                <div class="panel">
+                    <p>Operator ditulis ke dalam stack jika operator sebelumnya memiliki presedensi lebih rendah.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#aturan-4">https://www.petanikode.com/c-dasar/tipe-data/#aturan-4</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Aturan 5</button>
+                <div class="panel">
+                    <p>Operator ditulis ke dalam stack jika operator sebelumnya memiliki presedensi sama dan asosiatif
+                        kiri.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#aturan-5">https://www.petanikode.com/c-dasar/tipe-data/#aturan-5</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Aturan 6</button>
+                <div class="panel">
+                    <p>Operator ditulis ke dalam stack jika operator sebelumnya adalah kurung buka.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#aturan-6">https://www.petanikode.com/c-dasar/tipe-data/#aturan-6</a>
+                    </p>
+                </div>
+            </div>
+
+            <div id="StackArray" class="tabcontent">
+                <h3>Stack Pada Array</h3>
+                <p>Stack dapat direpresentasikan dengan menggunakan array. Array yang digunakan harus memiliki ukuran
+                    yang tetap.</p>
+
+                <p>Stack memiliki dua variabel, yaitu:</p>
+
+                <button class="accordion">Top</button>
+                <div class="panel">
+                    <p>Top adalah variabel yang digunakan untuk menyimpan indeks data teratas dari stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#top">https://www.petanikode.com/c-dasar/tipe-data/#top</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Data</button>
+                <div class="panel">
+                    <p>Data adalah variabel yang digunakan untuk menyimpan data yang ada di dalam stack.</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#data">https://www.petanikode.com/c-dasar/tipe-data/#data</a>
+                    </p>
+                </div>
+
+                <button class="accordion">Contoh</button>
+                <div class="panel">
+                    <p>Contoh stack representasi statis adalah sebagai berikut:</p>
+                    <p>int stack[5];</p>
+                    <p>Referensi: <a
+                            href="https://www.petanikode.com/c-dasar/tipe-data/#stack-representasi-statis">https://www.petanikode.com/c-dasar/tipe-data/#stack-representasi-statis</a>
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="flex justify-center my-6">
+                    <img src="../../../assets/img/foto.png" alt="Cindy Septi Agustiani"
+                        class="rounded-full w-[150px] h-auto">
+                </div>
+                <p>Nama saya Cindy Septi Agustiani. Saya adalah mahasiswa Teknik Informatika di Sekolah Tinggi Teknologi
+                    Bandung.</p>
+                <br>
+                <div class="flex justify-center">
+                    <a href="https://cindyseptiagustiani20.github.io/" target="_blank"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Another Post</h3>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Queue</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Queue atau antrian adalah struktur data yang menerapkan prinsip operasi
+                            dimana elemen data yang masuk pertama akan keluar lebih dulu. Prinsip ini dikenal dengan
+                            istilah FIFO (First In, First Out)</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/queue"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">List</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">List adalah struktur data yang digunakan untuk menyimpan sekumpulan data. List memiliki dua jenis, yaitu singly linked list dan doubly linked list</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/list"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-6">
+                    <a href="https://cindyseptiagustiani20.github.io/my_blog"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More Post
+                    </a>
+                </div>
+
+            </div>
+            <div class="card h-auto">
+                <h3>Follow Me</h3>
+
+                <div class="social-media flex justify-center pb-[50px]">
+                    <a href="https://github.com/cindyseptiagustiani20" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/cindysepti_20?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://gitlab.com/cindyseptiagustiani" target="_blank"><i class="fab fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/cindy-septi-agustiani/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-2 fixed bottom-0 w-full bg-[#1a1a1d] text-center text-[#C3073F] ml-[0px]">
+        <p>&copy; 2023 Cindy Septi Agustiani</p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // accordion with jquery
+        $(document).ready(function () {
+            $(".accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var panel = $(this).next();
+
+                if (panel.css("display") == "block") {
+                    panel.css("display", "none");
+                } else {
+                    panel.css("display", "block");
+                }
+
+                $(".accordion").not(this).removeClass("active");
+                $(".panel").not(panel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tablinks").first().addClass("active");
+            $(".tabcontent").first().css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
