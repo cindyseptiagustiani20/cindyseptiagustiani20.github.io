@@ -124,7 +124,7 @@ body {
     color: #C3073F;
 }
 
-.accordion {
+.accordion, .sub-accordion {
     background-color: #1a1a1d;
     color: #ffff;
     cursor: pointer;
@@ -144,40 +144,40 @@ body {
 }
 
 .active,
-.accordion:hover {
+.accordion:hover, .sub-accordion:hover {
     background-color: #C3073F;
     color: #ffff;
 }
 
-.panel {
+.panel, .sub-panel {
     padding: 0 18px;
     display: none;
     overflow: hidden;
     padding-top: 20px;
 }
 
-.panel p {
+.panel p, .sub-panel p {
     font-size: 1rem;
     font-weight: 500;
     color: #ffff;
     margin-bottom: 1rem;
 }
 
-.panel h3 {
+.panel h3, .sub-panel h3 {
     font-size: 1.5rem;
     font-weight: 700;
     color: #C3073F;
     margin-bottom: 1rem;
 }
 
-.panel a {
+.panel a, .sub-panel a {
     font-size: 1rem;
     font-weight: 500;
     color: #950740;
     margin-bottom: 1rem;
 }
 
-.panel a:hover {
+.panel a:hover, .sub-panel a:hover {
     color: #C3073F;
 }
 
