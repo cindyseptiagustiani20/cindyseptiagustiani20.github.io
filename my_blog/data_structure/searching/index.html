@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cindy Septi Agustiani's Blog | Struktur Data - Searching</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/blog/blog_style.css">
+    <link rel="icon" href="../../../assets/img/foto.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Struktur Data</h1>
+        <h2>10. Searching</h2>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pengertian')">Pengertian</button>
+                <button class="tablinks" onclick="openCity(event, 'Algoritma')">Algoritma</button>
+                <button class="tablinks" onclick="openCity(event, 'Contoh')">Contoh</button>
+                <button class="tablinks" onclick="openCity(event, 'Keuntungan')">Keuntungan</button>
+                <button class="tablinks" onclick="openCity(event, 'Kekurangan')">Kekurangan</button>
+            </div>
+
+            <div id="Pengertian" class="tabcontent">
+                <h3>Pengertian</h3>
+                <p>Searching adalah proses pencarian data. Data yang dicari dapat berupa angka, huruf, atau objek
+                    lainnya.
+                    Searching bertujuan untuk menemukan data yang dicari.</p>
+
+                <p>Searching dapat dilakukan dengan berbagai cara, seperti:</p>
+
+                <ul class="list-disc space-y-2 pl-4">
+                    <li>Sequential Search</li>
+                    <li>Binary Search</li>
+                    <li>Hashing</li>
+                    <li>Interpolation Search</li>
+                    <li>Exponential Search</li>
+                    <li>Jump Search</li>
+                    <li>Sublist Search (Search a linked list in another list)</li>
+                    <li>Fibonacci Search</li>
+                    <li>Exponential Search</li>
+                    <li>Sublist Search (Search a linked list in another list)</li>
+                    <li>Fibonacci Search</li>
+                </ul>
+
+                <p>Setiap metode searching memiliki kelebihan dan kekurangan masing-masing.</p>
+            </div>
+
+            <div id="Algoritma" class="tabcontent">
+                <h3>Algoritma</h3>
+                <p>Algoritma searching adalah algoritma yang digunakan untuk mencari data dalam suatu kumpulan data.</p>
+
+                <p>Beberapa algoritma searching yang sering digunakan adalah:</p>
+
+                <button class="accordion">Sequential Search</button>
+                <div class="panel">
+                    <p>Sequential Search adalah algoritma searching yang paling sederhana. Algoritma ini bekerja dengan
+                        cara membandingkan setiap elemen dalam kumpulan data dengan elemen yang dicari.</p>
+
+                    <p>Algoritma ini cocok digunakan untuk kumpulan data yang tidak terlalu besar.</p>
+
+                    <p>Kelemahan dari algoritma ini adalah waktu eksekusi yang lama, terutama jika kumpulan data yang
+                        dicari berada di akhir kumpulan data.</p>
+
+                    <p>Waktu eksekusi algoritma ini adalah O(n).</p>
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/sequential_search.png"
+                            alt="Sequential Search" class="w-[600px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Binary Search</button>
+                <div class="panel">
+                    <p>Binary Search adalah algoritma searching yang digunakan untuk mencari data dalam kumpulan data
+                        yang sudah diurutkan.</p>
+
+                    <p>Algoritma ini bekerja dengan cara membandingkan elemen tengah kumpulan data dengan elemen yang
+                        dicari.
+                        Jika elemen tengah lebih kecil dari elemen yang dicari, maka pencarian dilakukan pada setengah
+                        kanan kumpulan data.
+                        Jika elemen tengah lebih besar dari elemen yang dicari, maka pencarian dilakukan pada setengah
+                        kiri kumpulan data.
+                        Proses ini diulang sampai elemen yang dicari ditemukan.</p>
+
+                    <p>Kelebihan dari algoritma ini adalah waktu eksekusi yang cepat.</p>
+
+                    <p>Waktu eksekusi algoritma ini adalah O(log n).</p>
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/binary_search.png" alt="Binary Search"
+                            class="w-[600px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Hashing</button>
+                <div class="panel">
+                    <p>Hashing adalah algoritma searching yang menggunakan fungsi hash untuk mencari data dalam kumpulan
+                        data.</p>
+
+                    <p>Fungsi hash adalah fungsi yang mengubah data menjadi nilai yang lebih kecil. Nilai yang
+                        dihasilkan oleh
+                        fungsi hash disebut hash code.</p>
+
+                    <p>Hash code digunakan sebagai indeks untuk mencari data dalam tabel hash.</p>
+
+                    <p>Kelebihan dari algoritma ini adalah waktu eksekusi yang cepat.</p>
+
+                    <p>Waktu eksekusi algoritma ini adalah O(1).</p>
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/hashing.png" alt="Hashing"
+                            class="w-[600px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Interpolation Search</button>
+                <div class="panel">
+                    <p>Interpolation Search adalah algoritma searching yang digunakan untuk mencari data dalam kumpulan
+                        data yang sudah diurutkan.</p>
+
+                    <p>Algoritma ini bekerja dengan cara memprediksi posisi data yang dicari berdasarkan nilai data yang
+                        ada.</p>
+
+                    <p>Kelebihan dari algoritma ini adalah waktu eksekusi yang cepat.</p>
+
+                    <p>Waktu eksekusi algoritma ini adalah O(log log n).</p>
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/interpolation_search.png"
+                            alt="Interpolation Search" class="w-[600px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Exponential Search</button>
+                <div class="panel">
+                    <p>Exponential Search adalah algoritma searching yang digunakan untuk mencari data dalam kumpulan
+                        data yang sudah diurutkan.</p>
+
+                    <p>Algoritma ini bekerja dengan cara mencari rentang data yang mengandung data yang dicari, kemudian
+                        melakukan
+                        binary search pada rentang tersebut.</p>
+
+                    <p>Kelebihan dari algoritma ini adalah waktu eksekusi yang cepat.</p>
+
+                    <p>Waktu eksekusi algoritma ini adalah O(log n).</p>
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/exponential_search.png"
+                            alt="Exponential Search" class="w-[600px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Jump Search</button>
+                <div class="panel">
+                    <p>Jump Search adalah algoritma searching yang digunakan untuk mencari data dalam kumpulan data yang
+                        sudah diurutkan.</p>
+
+                    <p>Algoritma ini bekerja dengan cara melompati elemen-elemen kumpulan data dengan interval tertentu
+                        untuk
+                        mencari rentang data yang mengandung data yang dicari, kemudian melakukan sequential search pada
+                        rentang tersebut.</p>
+
+                    <p>Kelebihan dari algoritma ini adalah waktu eksekusi yang cepat.</p>
+
+                    <p>Waktu eksekusi algoritma ini adalah O(√n).</p>
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/jump_search.jpg" alt="Jump Search"
+                            class="w-[600px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Sublist Search (Search a linked list in another list)</button>
+                <div class="panel">
+                    <p>Sublist Search adalah algoritma searching yang digunakan untuk mencari data dalam kumpulan data
+                        yang sudah diurutkan.</p>
+
+                    <p>Algoritma ini bekerja dengan cara mencari rentang data yang mengandung data yang dicari, kemudian
+                        melakukan sequential search pada rentang tersebut.</p>
+
+                    <p>Kelebihan dari algoritma ini adalah waktu eksekusi yang cepat.</p>
+
+                    <p>Waktu eksekusi algoritma ini adalah O(n).</p>
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/sublist_search.png" alt="Sublist Search"
+                            class="w-[600px] h-auto">
+                    </div>
+
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/sublist_search_2.png"
+                            alt="Sublist Search" class="w-[600px] h-auto">
+                    </div>
+
+
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/sublist_search_3.png"
+                            alt="Sublist Search" class="w-[600px] h-auto">
+                    </div>
+
+
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/sublist_search_output.png"
+                            alt="Sublist Search" class="w-[600px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Fibonacci Search</button>
+                <div class="panel">
+                    <p>Fibonacci Search adalah algoritma searching yang digunakan untuk mencari data dalam kumpulan data
+                        yang sudah diurutkan.</p>
+
+                    <p>Algoritma ini bekerja dengan cara membagi kumpulan data menjadi dua bagian yang memiliki ukuran
+                        yang
+                        sama atau mendekati sama.</p>
+
+                    <p>Kelebihan dari algoritma ini adalah waktu eksekusi yang cepat.</p>
+
+                    <p>Waktu eksekusi algoritma ini adalah O(log n).</p>
+
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/searching/fibonacci_search.jpg"
+                            alt="Fibonacci Search" class="w-[600px] h-auto">
+                    </div>
+                </div>
+
+                <p>Setiap algoritma memiliki cara kerja yang berbeda-beda.</p>
+            </div>
+
+            <div id="Contoh" class="tabcontent">
+                <h3>Contoh</h3>
+                <p>Contoh penggunaan algoritma searching:</p>
+
+                <button class="accordion">Sequential Search</button>
+                <div class="panel">
+                    <p>Contoh penggunaan Sequential Search:</p>
+
+                    <p>Array: 5, 3, 8, 6, 2, 7, 4, 1, 9</p>
+
+                    <p>Data yang dicari: 7</p>
+
+                    <p>Langkah 1: Membandingkan data yang dicari dengan data pertama dalam array.</p>
+
+                    <p>Langkah 2: Membandingkan data yang dicari dengan data kedua dalam array.</p>
+
+                    <p>Langkah 3: Membandingkan data yang dicari dengan data ketiga dalam array.</p>
+
+                    <p>Langkah 4: Membandingkan data yang dicari dengan data keempat dalam array.</p>
+
+                    <p>Langkah 5: Membandingkan data yang dicari dengan data kelima dalam array.</p>
+
+                    <p>Langkah 6: Membandingkan data yang dicari dengan data keenam dalam array.</p>
+
+                    <p>Langkah 7: Membandingkan data yang dicari dengan data ketujuh dalam array.</p>
+
+                    <p>Langkah 8: Data yang dicari ditemukan.</p>
+
+                    <p>Output: 7 ditemukan pada indeks ke-5.</p>
+
+                    <p>Waktu eksekusi: O(n).</p>
+
+                    <pre>
+                        <code>
+                            #include &lt;stdio.h&gt;
+
+                            int main() {
+                                int arr[] = {5, 3, 8, 6, 2, 7, 4, 1, 9};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                                int x = 7;
+                                int i;
+
+                                for (i = 0; i < n; i++) {
+                                    if (arr[i] == x) {
+                                        printf("%d ditemukan pada indeks ke-%d\n", x, i);
+                                        break;
+                                    }
+                                }
+
+                                return 0;
+                            }
+                        </code>
+                    </pre>
+                </div>
+
+                <button class="accordion">Binary Search</button>
+                <div class="panel">
+                    <p>Contoh penggunaan Binary Search:</p>
+
+                    <p>Array: 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+
+                    <p>Data yang dicari: 7</p>
+
+                    <p>Langkah 1: Membandingkan data yang dicari dengan data tengah dalam array.</p>
+
+                    <p>Langkah 2: Membandingkan data yang dicari dengan data tengah dalam setengah kanan array.</p>
+
+                    <p>Langkah 3: Membandingkan data yang dicari dengan data tengah dalam setengah kiri array.</p>
+
+                    <p>Langkah 4: Data yang dicari ditemukan.</p>
+
+                    <p>Output: 7 ditemukan pada indeks ke-6.</p>
+
+                    <p>Waktu eksekusi: O(log n).</p>
+
+                    <pre>
+                        <code>
+                            #include &lt;stdio.h&gt;
+
+                            int binarySearch(int arr[], int l, int r, int x) {
+                                if (r >= l) {
+                                    int mid = l + (r - l) / 2;
+
+                                    if (arr[mid] == x) {
+                                        return mid;
+                                    }
+
+                                    if (arr[mid] > x) {
+                                        return binarySearch(arr, l, mid - 1, x);
+                                    }
+
+                                    return binarySearch(arr, mid + 1, r, x);
+                                }
+
+                                return -1;
+                            }
+
+                            int main() {
+                                int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                                int x = 7;
+                                int result = binarySearch(arr, 0, n - 1, x);
+
+                                if (result == -1) {
+                                    printf("%d tidak ditemukan\n", x);
+                                } else {
+                                    printf("%d ditemukan pada indeks ke-%d\n", x, result);
+                                }
+
+                                return 0;
+                            }
+                        </code>
+                    </pre>
+                </div>
+
+                <button class="accordion">Hashing</button>
+                <div class="panel">
+                    <p>Contoh penggunaan Hashing:</p>
+
+                    <p>Array: 5, 3, 8, 6, 2, 7, 4, 1, 9</p>
+
+                    <p>Data yang dicari: 7</p>
+
+                    <p>Langkah 1: Mengubah data menjadi hash code.</p>
+
+                    <p>Langkah 2: Menggunakan hash code sebagai indeks untuk mencari data dalam tabel hash.</p>
+
+                    <p>Langkah 3: Data yang dicari ditemukan.</p>
+
+                    <p>Output: 7 ditemukan pada indeks ke-5.</p>
+
+                    <p>Waktu eksekusi: O(1).</p>
+
+                    <pre>
+                        <code>
+                            #include &lt;stdio.h&gt;
+
+                            int main() {
+                                int arr[] = {5, 3, 8, 6, 2, 7, 4, 1, 9};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                                int x = 7;
+                                int hash_code = x % n;
+
+                                if (arr[hash_code] == x) {
+                                    printf("%d ditemukan pada indeks ke-%d\n", x, hash_code);
+                                } else {
+                                    printf("%d tidak ditemukan\n", x);
+                                }
+
+                                return 0;
+                            }
+                        </code>
+                    </pre>
+                </div>
+
+                <button class="accordion">Interpolation Search</button>
+                <div class="panel">
+                    <p>Contoh penggunaan Interpolation Search:</p>
+
+                    <p>Array: 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+
+                    <p>Data yang dicari: 7</p>
+
+                    <p>Langkah 1: Memprediksi posisi data yang dicari berdasarkan nilai data yang ada.</p>
+
+                    <p>Langkah 2: Membandingkan data yang dicari dengan data yang diprediksi.</p>
+
+                    <p>Langkah 3: Data yang dicari ditemukan.</p>
+
+                    <p>Output: 7 ditemukan pada indeks ke-6.</p>
+
+                    <p>Waktu eksekusi: O(log log n).</p>
+
+                    <pre>
+                        <code>
+                            #include &lt;stdio.h&gt;
+
+                            int interpolationSearch(int arr[], int n, int x) {
+                                int low = 0;
+                                int high = (n - 1);
+
+                                while (low <= high && x >= arr[low] && x <= arr[high]) {
+                                    int pos = low + (((double)(high - low) / (arr[high] - arr[low])) * (x - arr[low]));
+
+                                    if (arr[pos] == x) {
+                                        return pos;
+                                    }
+
+                                    if (arr[pos] < x) {
+                                        low = pos + 1;
+                                    } else {
+                                        high = pos - 1;
+                                    }
+                                }
+
+                                return -1;
+                            }
+
+                            int main() {
+                                int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                                int x = 7;
+                                int result = interpolationSearch(arr, n, x);
+
+                                if (result == -1) {
+                                    printf("%d tidak ditemukan\n", x);
+                                } else {
+                                    printf("%d ditemukan pada indeks ke-%d\n", x, result);
+                                }
+
+                                return 0;
+                            }
+                        </code>
+                    </pre>
+                </div>
+
+                <button class="accordion">Exponential Search</button>
+                <div class="panel">
+                    <p>Contoh penggunaan Exponential Search:</p>
+
+                    <p>Array: 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+
+                    <p>Data yang dicari: 7</p>
+
+                    <p>Langkah 1: Mencari rentang data yang mengandung data yang dicari.</p>
+
+                    <p>Langkah 2: Melakukan binary search pada rentang tersebut.</p>
+
+                    <p>Langkah 3: Data yang dicari ditemukan.</p>
+
+                    <p>Output: 7 ditemukan pada indeks ke-6.</p>
+
+                    <p>Waktu eksekusi: O(log n).</p>
+
+                    <pre>
+                        <code>
+                            #include &lt;stdio.h&gt;
+
+                            int binarySearch(int arr[], int l, int r, int x) {
+                                if (r >= l) {
+                                    int mid = l + (r - l) / 2;
+
+                                    if (arr[mid] == x) {
+                                        return mid;
+                                    }
+
+                                    if (arr[mid] > x) {
+                                        return binarySearch(arr, l, mid - 1, x);
+                                    }
+
+                                    return binarySearch(arr, mid + 1, r, x);
+                                }
+
+                                return -1;
+                            }
+
+                            int exponentialSearch(int arr[], int n, int x) {
+                                if (arr[0] == x) {
+                                    return 0;
+                                }
+
+                                int i = 1;
+
+                                while (i < n && arr[i] <= x) {
+                                    i = i * 2;
+                                }
+
+                                return binarySearch(arr, i / 2, (i < n) ? i : n, x);
+                            }
+
+                            int main() {
+                                int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                                int x = 7;
+                                int result = exponentialSearch(arr, n, x);
+
+                                if (result == -1) {
+                                    printf("%d tidak ditemukan\n", x);
+                                } else {
+                                    printf("%d ditemukan pada indeks ke-%d\n", x, result);
+                                }
+                                
+                                return 0;
+
+                            }
+
+                        </code>
+                    </pre>
+                </div>
+
+                <button class="accordion">Jump Search</button>
+                <div class="panel">
+                    <p>Contoh penggunaan Jump Search:</p>
+
+                    <p>Array: 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+
+                    <p>Data yang dicari: 7</p>
+
+                    <p>Langkah 1: Melompati elemen-elemen kumpulan data dengan interval tertentu.</p>
+
+                    <p>Langkah 2: Melakukan sequential search pada rentang data yang mengandung data yang dicari.</p>
+
+                    <p>Langkah 3: Data yang dicari ditemukan.</p>
+
+                    <p>Output: 7 ditemukan pada indeks ke-6.</p>
+
+                    <p>Waktu eksekusi: O(√n).</p>
+
+                    <pre>
+                        <code>
+                            #include &lt;stdio.h>
+                            #include &lt;math.h>
+
+                            int jumpSearch(int arr[], int n, int x) {
+                                int step = sqrt(n);
+                                int prev = 0;
+
+                                while (arr[fmin(step, n) - 1] < x) {
+                                    prev = step;
+                                    step += sqrt(n);
+
+                                    if (prev >= n) {
+                                        return -1;
+                                    }
+                                }
+
+                                while (arr[prev] < x) {
+                                    prev++;
+
+                                    if (prev == fmin(step, n)) {
+                                        return -1;
+                                    }
+                                }
+
+                                if (arr[prev] == x) {
+                                    return prev;
+                                }
+
+                                return -1;
+                            }
+
+                            int main() {
+                                int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                                int x = 7;
+                                int result = jumpSearch(arr, n, x);
+
+                                if (result == -1) {
+                                    printf("%d tidak ditemukan\n", x);
+                                } else {
+                                    printf("%d ditemukan pada indeks ke-%d\n", x, result);
+                                }
+
+                                return 0;
+                            }
+                        </code>
+                    </pre>
+                </div>
+
+                <button class="accordion">Sublist Search (Search a linked list in another list)</button>
+                <div class="panel">
+                    <p>Contoh penggunaan Sublist Search:</p>
+
+                    <p>Linked List 1: 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+
+                    <p>Linked List 2: 3, 4, 5, 6</p>
+
+                    <p>Langkah 1: Mencari rentang data yang mengandung data yang dicari.</p>
+
+                    <p>Langkah 2: Melakukan sequential search pada rentang data yang mengandung data yang dicari.</p>
+
+                    <p>Langkah 3: Data yang dicari ditemukan.</p>
+
+                    <p>Output: Linked List 2 ditemukan pada indeks ke-2.</p>
+
+                    <p>Waktu eksekusi: O(n).</p>
+
+                    <pre>
+                        <code>
+                            #include &lt;stdio.h>
+                            #include &lt;stdlib.h>
+
+                            struct Node {
+                                int data;
+                                struct Node* next;
+                            };
+
+                            int findList(struct Node* first, struct Node* second) {
+                                struct Node* ptr1 = first;
+                                struct Node* ptr2 = second;
+
+                                if (first == NULL && second == NULL) {
+                                    return 1;
+                                }
+
+                                if (first == NULL || (first != NULL && second == NULL)) {
+                                    return 0;
+                                }
+
+                                while (second != NULL) {
+                                    ptr2 = second;
+
+                                    while (ptr1 != NULL) {
+                                        if (ptr2 == NULL) {
+                                            return 0;
+                                        } else if (ptr1->data == ptr2->data) {
+                                            ptr1 = ptr1->next;
+                                            ptr2 = ptr2->next;
+                                        } else {
+                                            break;
+                                        }
+                                    }
+
+                                    if (ptr1 == NULL) {
+                                        return 1;
+                                    }
+
+                                    ptr1 = first;
+                                    second = second->next;
+                                }
+
+                                return 0;
+                            }
+
+                            void push(struct Node** head_ref, int new_data) {
+                                struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+                                new_node->data = new_data;
+                                new_node->next = (*head_ref);
+                                (*head_ref) = new_node;
+                            }
+
+                            int main() {
+                                struct Node *a = NULL, *b = NULL;
+
+                                push(&a, 1);
+                                push(&a, 2);
+                                push(&a, 3);
+                                push(&a, 4);
+                                push(&a, 5);
+                                push(&a, 6);
+                                push(&a, 7);
+                                push(&a, 8);
+                                push(&a, 9);
+
+                                push(&b, 3);
+                                push(&b, 4);
+                                push(&b, 5);
+                                push(&b, 6);
+
+                                if (findList(a, b)) {
+                                    printf("Linked List 2 ditemukan pada indeks ke-2\n");
+                                } else {
+                                    printf("Linked List 2 tidak ditemukan\n");
+                                }
+
+                                return 0;
+                            }
+                        </code>
+                    </pre>
+                </div>
+
+                <button class="accordion">Fibonacci Search</button>
+                <div class="panel">
+                    <p>Contoh penggunaan Fibonacci Search:</p>
+
+                    <p>Array: 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+
+                    <p>Data yang dicari: 7</p>
+
+                    <p>Langkah 1: Membagi kumpulan data menjadi dua bagian yang memiliki ukuran yang sama atau mendekati
+                        sama.</p>
+
+                    <p>Langkah 2: Membandingkan data yang dicari dengan data tengah kedua bagian.</p>
+
+                    <p>Langkah 3: Data yang dicari ditemukan.</p>
+
+                    <p>Output: 7 ditemukan pada indeks ke-6.</p>
+
+                    <p>Waktu eksekusi: O(log n).</p>
+
+                    <pre>
+                        <code>
+                            #include &lt;stdio.h>
+
+                            int min(int x, int y) {
+                                return (x <= y) ? x : y;
+                            }
+
+                            int fibonacciSearch(int arr[], int x, int n) {
+                                int fibMMm2 = 0;
+                                int fibMMm1 = 1;
+                                int fibM = fibMMm2 + fibMMm1;
+
+                                while (fibM < n) {
+                                    fibMMm2 = fibMMm1;
+                                    fibMMm1 = fibM;
+                                    fibM = fibMMm2 + fibMMm1;
+                                }
+
+                                int offset = -1;
+
+                                while (fibM > 1) {
+                                    int i = min(offset + fibMMm2, n - 1);
+
+                                    if (arr[i] < x) {
+                                        fibM = fibMMm1;
+                                        fibMMm1 = fibMMm2;
+                                        fibMMm2 = fibM - fibMMm1;
+                                        offset = i;
+                                    } else if (arr[i] > x) {
+                                        fibM = fibMMm2;
+                                        fibMMm1 = fibMMm1 - fibMMm2;
+                                        fibMMm2 = fibM - fibMMm1;
+                                    } else {
+                                        return i;
+                                    }
+                                }
+
+                                if (fibMMm1 && arr[offset + 1] == x) {
+                                    return offset + 1;
+                                }
+
+                                return -1;
+                            }
+
+                            int main() {
+                                int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                                int x = 7;
+                                int result = fibonacciSearch(arr, x, n);
+
+                                if (result == -1) {
+                                    printf("%d tidak ditemukan\n", x);
+                                } else {
+                                    printf("%d ditemukan pada indeks ke-%d\n", x, result);
+                                }
+
+                                return 0;
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div id="Keuntungan" class="tabcontent">
+                <h3>Keuntungan</h3>
+                <p>Keuntungan menggunakan algoritma searching:</p>
+
+                <ul class="list-disc space-y-2 pl-4">
+                    <li>Memudahkan dalam mencari data.</li>
+                    <li>Waktu eksekusi yang cepat.</li>
+                    <li>Meminimalisir kesalahan dalam pencarian data.</li>
+                    <li>Meminimalisir penggunaan memori.</li>
+                    <li>Meminimalisir penggunaan waktu.</li>
+                </ul>
+
+                <p>Setiap algoritma searching memiliki keuntungan masing-masing.</p>
+            </div>
+
+            <div id="Kekurangan" class="tabcontent">
+                <h3>Kekurangan</h3>
+                <p>Kekurangan menggunakan algoritma searching:</p>
+
+                <ul class="list-disc space-y-2 pl-4">
+                    <li>Waktu eksekusi yang lama.</li>
+                    <li>Membutuhkan memori yang besar.</li>
+                    <li>Membutuhkan waktu yang lama.</li>
+                    <li>Membutuhkan biaya yang besar.</li>
+                    <li>Membutuhkan tenaga yang besar.</li>
+                </ul>
+
+                <p>Setiap algoritma searching memiliki kekurangan masing-masing.</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="flex justify-center my-6">
+                    <img src="../../../assets/img/foto.png" alt="Cindy Septi Agustiani"
+                        class="rounded-full w-[150px] h-auto">
+                </div>
+                <p>Nama saya Cindy Septi Agustiani. Saya adalah mahasiswa Teknik Informatika di Sekolah Tinggi Teknologi
+                    Bandung.</p>
+                <br>
+                <div class="flex justify-center p-6">
+                    <a href="https://cindyseptiagustiani20.github.io/" target="_blank"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Another Post</h3>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Pointer</h4>
+                        <p>Feb 10, 2024</p>
+
+                        <p class="text-sm mb-4">Pointer adalah variabel yang menyimpan alamat memori dari variabel lain.
+                            Pointer digunakan untuk mengakses variabel lain secara tidak langsung.</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/pointer"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Pengenalan Struktur Data</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Struktur data adalah cara menyimpan dan mengorganisir data di dalam
+                            komputer agar dapat digunakan dengan efisien dan efektif</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/data_structure"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-6">
+                    <a href="https://cindyseptiagustiani20.github.io/my_blog"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More Post
+                    </a>
+                </div>
+
+            </div>
+            <div class="card h-auto">
+                <h3>Follow Me</h3>
+
+                <div class="social-media flex justify-center pb-[50px]">
+                    <a href="https://github.com/cindyseptiagustiani20" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/cindysepti_20?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://gitlab.com/cindyseptiagustiani" target="_blank"><i class="fab fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/cindy-septi-agustiani/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-2 fixed bottom-0 w-full bg-[#1a1a1d] text-center text-[#C3073F] ml-[0px]">
+        <p>&copy; 2023 Cindy Septi Agustiani</p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        $(document).ready(function () {
+            $(".accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var panel = $(this).next();
+
+                if (panel.css("display") == "block") {
+                    panel.css("display", "none");
+                } else {
+                    panel.css("display", "block");
+                }
+
+                $(".accordion").not(this).removeClass("active");
+                $(".panel").not(panel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".sub-accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var subPanel = $(this).next();
+
+                if (subPanel.css("display") == "block") {
+                    subPanel.css("display", "none");
+                } else {
+                    subPanel.css("display", "block");
+                }
+
+                $(".sub-accordion").not(this).removeClass("active");
+                $(".sub-panel").not(subPanel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tablinks").first().addClass("active");
+            $(".tabcontent").first().css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
