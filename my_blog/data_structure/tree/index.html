@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cindy Septi Agustiani's Blog | Struktur Data - Tree</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/blog/blog_style.css">
+    <link rel="icon" href="../../../assets/img/foto.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Struktur Data</h1>
+        <h2>7. Tree</h2>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pengertian')">Pengertian</button>
+                <button class="tablinks" onclick="openCity(event, 'Jenis')">Jenis-jenis</button>
+                <button class="tablinks" onclick="openCity(event, 'Contoh')">Contoh</button>
+                <button class="tablinks" onclick="openCity(event, 'Operasi')">Operasi</button>
+                <button class="tablinks" onclick="openCity(event, 'Implementasi')">Implementasi</button>
+            </div>
+
+            <div id="Pengertian" class="tabcontent">
+                <h3>Pengertian</h3>
+                <p>Tree adalah struktur data yang terdiri dari kumpulan simpul (node) yang saling terhubung satu sama
+                    lain
+                    dengan cara tertentu. Setiap simpul dalam tree memiliki anak (child) dan orang tua (parent) kecuali
+                    simpul yang berada di puncak tree yang disebut root. Tree memiliki beberapa istilah yang perlu
+                    diketahui, yaitu:</p>
+                <button class="accordion">Root</button>
+                <div class="panel">
+                    <p>Root adalah simpul yang berada di puncak tree. Root tidak memiliki parent.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/root_parent_leaf.png" alt="Root"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Anak</button>
+                <div class="panel">
+                    <p>Anak adalah simpul yang berada di bawah simpul lain. Anak memiliki parent.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/tree.png" alt="Child"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Parent</button>
+                <div class="panel">
+                    <p>Parent adalah simpul yang berada di atas simpul lain. Parent memiliki anak.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/root_parent_leaf.png" alt="Parent"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Leaf</button>
+                <div class="panel">
+                    <p>Leaf adalah simpul yang tidak memiliki anak.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/root_parent_leaf.png" alt="Leaf"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Level</button>
+                <div class="panel">
+                    <p>Level adalah jarak antara simpul dengan root. Root memiliki level 0, anak dari root memiliki
+                        level
+                        1, dan seterusnya.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/tree.png" alt="Level"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Height</button>
+                <div class="panel">
+                    <p>Height adalah jarak terjauh antara root dengan leaf. Root memiliki height 0, anak dari root
+                        memiliki height 1, dan seterusnya.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/tree.jpg" alt="Height"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Degree</button>
+                <div class="panel">
+                    <p>Degree adalah jumlah anak dari suatu simpul.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/tree.jpg" alt="Degree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Subtree</button>
+                <div class="panel">
+                    <p>Subtree adalah tree yang terdiri dari simpul dan anak-anaknya.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/subtree.png" alt="Subtree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Path</button>
+                <div class="panel">
+                    <p>Path adalah urutan simpul yang saling terhubung dalam tree.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/tree.jpg" alt="Path" class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Forest</button>
+                <div class="panel">
+                    <p>Forest adalah kumpulan tree yang tidak saling terhubung.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/forest.png" alt="Forest"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Jenis" class="tabcontent">
+                <h3>Jenis-jenis</h3>
+                <p>Tree memiliki beberapa jenis, yaitu:</p>
+
+                <button class="accordion">Binary Tree</button>
+                <div class="panel">
+                    <p>Binary tree adalah tree yang setiap simpulnya memiliki paling banyak dua anak.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/binary_tree.png" alt="Binary Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Binary Search Tree</button>
+                <div class="panel">
+                    <p>Binary search tree adalah binary tree yang setiap simpulnya memiliki nilai yang lebih kecil dari
+                        anak kiri dan lebih besar dari anak kanan.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/binary_search_tree.png"
+                            alt="Binary Search Tree" class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">AVL Tree</button>
+                <div class="panel">
+                    <p>AVL tree adalah binary search tree yang seimbang. AVL tree memiliki keseimbangan yang baik
+                        sehingga
+                        waktu pencarian data menjadi lebih cepat.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/avl_tree.png" alt="AVL Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Red-Black Tree</button>
+                <div class="panel">
+                    <p>Red-black tree adalah binary search tree yang memiliki aturan tertentu. Red-black tree memiliki
+                        keseimbangan yang baik sehingga waktu pencarian data menjadi lebih cepat.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/red_black_tree.png" alt="Red-Black Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">B-Tree</button>
+                <div class="panel">
+                    <p>B-tree adalah tree yang memiliki banyak anak. B-tree digunakan untuk menyimpan data yang besar
+                        dan
+                        terdistribusi.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/b_tree.png" alt="B-Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Trie</button>
+                <div class="panel">
+                    <p>Trie adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan string.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/trie.png" alt="Trie" class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Segment Tree</button>
+                <div class="panel">
+                    <p>Segment tree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan rentang
+                        nilai.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/segment_tree.png" alt="Segment Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Suffix Tree</button>
+                <div class="panel">
+                    <p>Suffix tree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan string.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/suffix_tree.png" alt="Suffix Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Heap</button>
+                <div class="panel">
+                    <p>Heap adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan prioritas.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/heap.png" alt="Heap" class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Fenwick Tree</button>
+                <div class="panel">
+                    <p>Fenwick tree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan rentang
+                        nilai.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/fenwick_tree.png" alt="Fenwick Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Suffix Array</button>
+                <div class="panel">
+                    <p>Suffix array adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan string.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/suffix_array.png" alt="Suffix Array"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Tournament Tree</button>
+                <div class="panel">
+                    <p>Tournament tree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan
+                        turnamen.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/tournament_tree.png" alt="Tournament Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Splay Tree</button>
+                <div class="panel">
+                    <p>Splay tree adalah tree yang digunakan untuk menyimpan data yang sering diakses.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/splay_tree.png" alt="Splay Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Tango Tree</button>
+                <div class="panel">
+                    <p>Tango tree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan string.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/tango_tree.png" alt="Tango Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Wavelet Tree</button>
+                <div class="panel">
+                    <p>Wavelet tree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan string.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/wavelet_tree.jpg" alt="Wavelet Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Interval Tree</button>
+                <div class="panel">
+                    <p>Interval tree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan rentang
+                        nilai.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/interval_tree.png" alt="Interval Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">KD Tree</button>
+                <div class="panel">
+                    <p>KD tree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan dimensi
+                        lebih
+                        dari satu.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/kd_tree.png" alt="KD Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Quadtree</button>
+                <div class="panel">
+                    <p>Quadtree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan dimensi
+                        dua.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/quadtree.jpg" alt="Quadtree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Octree</button>
+                <div class="panel">
+                    <p>Octree adalah tree yang digunakan untuk menyimpan data yang berhubungan dengan dimensi
+                        tiga.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/octree.png" alt="Octree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">General Tree</button>
+                <div class="panel">
+                    <p>General tree adalah tree yang tidak memiliki batasan jumlah anak dari suatu simpul.</p>
+
+                    <p>Contoh:</p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/tree/general_tree.png" alt="General Tree"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Contoh" class="tabcontent">
+                <h3>Contoh</h3>
+                <p>Tree dapat ditemui dalam kehidupan sehari-hari, seperti:</p>
+                <ul class="list-disc space-y-2 pl-4">
+                    <li>Struktur direktori pada sistem operasi</li>
+                    <li>Struktur keluarga</li>
+                    <li>Struktur organisasi</li>
+                    <li>Struktur bahasa pemrograman</li>
+                </ul>
+            </div>
+
+            <div id="Operasi" class="tabcontent">
+                <h3>Operasi</h3>
+                <p>Tree memiliki beberapa operasi, yaitu:</p>
+
+                <button class="accordion">Insert</button>
+                <div class="panel">
+                    <p>Insert adalah operasi yang digunakan untuk menambahkan simpul baru ke dalam tree. Simpul baru
+                        ditambahkan sesuai dengan aturan tree, yaitu simpul baru harus memiliki parent. Jika tree masih
+                        kosong, maka simpul baru akan menjadi root.</p>
+                </div>
+
+                <button class="accordion">Delete</button>
+                <div class="panel">
+                    <p>Delete adalah operasi yang digunakan untuk menghapus simpul dari tree. Simpul yang dihapus akan
+                        digantikan oleh simpul lain sesuai dengan aturan tree.</p>
+                </div>
+
+                <button class="accordion">Search</button>
+                <div class="panel">
+                    <p>Search adalah operasi yang digunakan untuk mencari simpul tertentu dalam tree. Simpul yang dicari
+                        akan ditemukan jika ada dalam tree.</p>
+
+                </div>
+
+                <button class="accordion">Traversal</button>
+                <div class="panel">
+                    <p>Traversal adalah operasi yang digunakan untuk mengunjungi setiap simpul dalam tree. Traversal
+                        tree
+                        terdiri dari beberapa jenis, yaitu:</p>
+
+                    <button class="sub-accordion">Preorder</button>
+                    <div class="sub-panel">
+                        <p>Preorder adalah traversal tree yang mengunjungi root terlebih dahulu, kemudian mengunjungi
+                            anak kiri, dan anak kanan.</p>
+
+                        <p>Contoh:</p>
+                        <div class="flex justify-center p-6">
+                            <img src="../../../assets/img/data_structure/tree/preorder.jpg" alt="Preorder" class="w-[300px] h-auto">
+                        </div>
+                    </div>
+
+                    <button class="sub-accordion">Inorder</button>
+                    <div class="sub-panel">
+                        <p>Inorder adalah traversal tree yang mengunjungi anak kiri terlebih dahulu, kemudian
+                            mengunjungi
+                            root, dan anak kanan.</p>
+
+                        <p>Contoh:</p>
+                        <div class="flex justify-center p-6">
+                            <img src="../../../assets/img/data_structure/tree/inorder.jpg" alt="Inorder" class="w-[300px] h-auto">
+                        </div>
+                    </div>
+
+                    <button class="sub-accordion">Postorder</button>
+                    <div class="sub-panel">
+                        <p>Postorder adalah traversal tree yang mengunjungi anak kiri terlebih dahulu, kemudian
+                            mengunjungi
+                            anak kanan, dan root.</p>
+
+                        <p>Contoh:</p>
+                        <div class="flex justify-center p-6">
+                            <img src="../../../assets/img/data_structure/tree/postorder.jpg" alt="Postorder" class="w-[300px] h-auto">
+                        </div>
+                    </div>
+
+                    <button class="sub-accordion">Level order</button>
+                    <div class="sub-panel">
+                        <p>Level order adalah traversal tree yang mengunjungi simpul dari level terendah ke level
+                            tertinggi.</p>
+
+                        <p>Contoh:</p>
+                        <div class="flex justify-center p-6">
+                            <img src="../../../assets/img/data_structure/tree/levelorder.jpg" alt="Level order" class="w-[300px] h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Implementasi" class="tabcontent">
+                <h3>Implementasi</h3>
+                <p>Tree dapat diimplementasikan dalam bahasa pemrograman, seperti:</p>
+                <ul class="list-disc space-y-2 pl-4">
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>PHP</li>
+                </ul>
+                <p>Contoh implementasi tree dalam bahasa pemrograman:</p>
+                <div class="flex justify-center p-6">
+                    <img src="../../../assets/img/data_structure/tree/tree_implementation.png" alt="Tree Implementation"
+                        class="w-[300px] h-auto">
+                </div>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="flex justify-center my-6">
+                    <img src="../../../assets/img/foto.png" alt="Cindy Septi Agustiani"
+                        class="rounded-full w-[150px] h-auto">
+                </div>
+                <p>Nama saya Cindy Septi Agustiani. Saya adalah mahasiswa Teknik Informatika di Sekolah Tinggi Teknologi
+                    Bandung.</p>
+                <br>
+                <div class="flex justify-center p-6">
+                    <a href="https://cindyseptiagustiani20.github.io/" target="_blank"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Another Post</h3>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Graf</h4>
+                        <p>Feb 10, 2024</p>
+
+                        <p class="text-sm mb-4">Graf adalah struktur data yang terdiri dari simpul-simpul (node) yang terhubung oleh sisi-sisi (edge). Graf digunakan untuk merepresentasikan hubungan antara objek-objek dalam bentuk jaringan yang kompleks. Setiap simpul dalam graf dapat memiliki beberapa sisi yang menghubungkannya dengan simpul-simpul lain.</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/graph"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Sorting</h4>
+                        <p>Feb 10, 2024</p>
+
+                        <p class="text-sm mb-4">Sorting adalah proses pengurutan data. Data yang diurutkan dapat berupa angka, huruf, atau objek lainnya. Sorting bertujuan untuk mengurutkan data dari yang terkecil hingga yang terbesar atau sebaliknya.</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/sorting"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-6">
+                    <a href="https://cindyseptiagustiani20.github.io/my_blog"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More Post
+                    </a>
+                </div>
+
+            </div>
+            <div class="card h-auto">
+                <h3>Follow Me</h3>
+
+                <div class="social-media flex justify-center pb-[50px]">
+                    <a href="https://github.com/cindyseptiagustiani20" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/cindysepti_20?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://gitlab.com/cindyseptiagustiani" target="_blank"><i class="fab fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/cindy-septi-agustiani/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-2 fixed bottom-0 w-full bg-[#1a1a1d] text-center text-[#C3073F] ml-[0px]">
+        <p>&copy; 2023 Cindy Septi Agustiani</p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        $(document).ready(function () {
+            $(".accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var panel = $(this).next();
+
+                if (panel.css("display") == "block") {
+                    panel.css("display", "none");
+                } else {
+                    panel.css("display", "block");
+                }
+
+                $(".accordion").not(this).removeClass("active");
+                $(".panel").not(panel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".sub-accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var subPanel = $(this).next();
+
+                if (subPanel.css("display") == "block") {
+                    subPanel.css("display", "none");
+                } else {
+                    subPanel.css("display", "block");
+                }
+
+                $(".sub-accordion").not(this).removeClass("active");
+                $(".sub-panel").not(subPanel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tablinks").first().addClass("active");
+            $(".tabcontent").first().css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
