@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cindy Septi Agustiani's Blog | Struktur Data - Pointer</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/blog/blog_style.css">
+    <link rel="icon" href="../../../assets/img/foto.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Struktur Data</h1>
+        <h2>11. Pointer</h2>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pengertian')">Pengertian</button>
+                <button class="tablinks" onclick="openCity(event, 'Contoh')">Contoh</button>
+                <button class="tablinks" onclick="openCity(event, 'perbedaan')">Perbedaan Variabel dan Pointer</button>
+                <button class="tablinks" onclick="openCity(event, 'Kelebihan')">Kelebihan</button>
+                <button class="tablinks" onclick="openCity(event, 'Kekurangan')">Kekurangan</button>
+                <button class="tablinks" onclick="openCity(event, 'Kesimpulan')">Kesimpulan</button>
+            </div>
+
+            <div id="Pengertian" class="tabcontent">
+                <h3>Pengertian</h3>
+
+                <p>Pointer adalah variabel yang menyimpan alamat memori dari variabel lain. Pointer digunakan untuk
+                    mengakses variabel lain secara tidak langsung.</p>
+
+            </div>
+
+            <div id="Contoh" class="tabcontent">
+                <h3>Contoh</h3>
+
+                <p>Contoh penggunaan pointer dalam bahasa pemrograman C++:</p>
+
+                <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+
+                        int main() {
+                            int a = 10;
+                            int *p;
+
+                            p = &a;
+
+                            cout << "Nilai dari a: " << a << endl;
+                            cout << "Alamat dari a: " << &a << endl;
+                            cout << "Nilai dari p: " << p << endl;
+                            cout << "Alamat dari p: " << &p << endl;
+                            cout << "Nilai yang ditunjuk oleh p: " << *p << endl;
+
+                            return 0;
+                        }
+                    </code>
+                </pre>
+
+                <p>Output:</p>
+
+                <pre>
+                    <code>
+                        Nilai dari a: 10
+                        Alamat dari a: 0x61ff04
+                        Nilai dari p: 0x61ff04
+                        Alamat dari p: 0x61ff00
+                        Nilai yang ditunjuk oleh p: 10
+                    </code>
+                </pre>
+            </div>
+
+            <div id="perbedaan" class="tabcontent">
+                <h3>Perbedaan Variabel dan Pointer</h3>
+
+                <p>Perbedaan antara variabel dan pointer adalah:</p>
+
+                <table class="table-auto">
+                    <tr>
+                        <th class="px-4 py-2">Variabel</th>
+                        <th class="px-4 py-2">Pointer</th>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">Menyimpan nilai</td>
+                        <td class="border px-4 py-2">Menyimpan alamat memori</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">Memiliki nilai</td>
+                        <td class="border px-4 py-2">Memiliki alamat memori</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">Memiliki alamat memori</td>
+                        <td class="border px-4 py-2">Memiliki alamat memori</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">Memiliki nilai yang dapat diubah</td>
+                        <td class="border px-4 py-2">Memiliki alamat memori yang dapat diubah</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">Memiliki alamat memori yang tetap</td>
+                        <td class="border px-4 py-2">Memiliki nilai yang tetap</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="Kelebihan" class="tabcontent">
+                <h3>Kelebihan</h3>
+
+                <p>Kelebihan dari pointer adalah:</p>
+
+                <ul class="list-disc list-inside">
+                    <li>Memungkinkan untuk mengakses variabel lain secara tidak langsung.</li>
+                    <li>Memungkinkan untuk mengakses alamat memori dari variabel lain.</li>
+                </ul>
+            </div>
+
+            <div id="Kekurangan" class="tabcontent">
+                <h3>Kekurangan</h3>
+
+                <p>Kekurangan dari pointer adalah:</p>
+
+                <ul class="list-disc list-inside">
+                    <li>Memiliki resiko yang tinggi dalam penggunaannya.</li>
+                    <li>Memiliki resiko yang tinggi dalam pengalokasian memori.</li>
+                </ul>
+            </div>
+
+            <div id="Kesimpulan" class="tabcontent">
+                <h3>Kesimpulan</h3>
+
+                <p>Pointer adalah variabel yang menyimpan alamat memori dari variabel lain. Pointer digunakan untuk
+                    mengakses variabel lain secara tidak langsung. Pointer memiliki kelebihan dan kekurangan dalam
+                    penggunaannya.</p>
+            </div>
+
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="flex justify-center my-6">
+                    <img src="../../../assets/img/foto.png" alt="Cindy Septi Agustiani"
+                        class="rounded-full w-[150px] h-auto">
+                </div>
+                <p>Nama saya Cindy Septi Agustiani. Saya adalah mahasiswa Teknik Informatika di Sekolah Tinggi Teknologi
+                    Bandung.</p>
+                <br>
+                <div class="flex justify-center p-6">
+                    <a href="https://cindyseptiagustiani20.github.io/" target="_blank"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Another Post</h3>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Pengenalan Struktur Data</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Struktur data adalah cara menyimpan dan mengorganisir data di dalam
+                            komputer agar dapat digunakan dengan efisien dan efektif</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/data_structure"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Tipe Data</h4>
+                        <p>Nov 21, 2023</p>
+
+                        <p class="text-sm mb-4">Tipe Data adalah jenis data yang tersimpan dalam variabel.</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/data_type"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-6">
+                    <a href="https://cindyseptiagustiani20.github.io/my_blog"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More Post
+                    </a>
+                </div>
+
+            </div>
+            <div class="card h-auto">
+                <h3>Follow Me</h3>
+
+                <div class="social-media flex justify-center pb-[50px]">
+                    <a href="https://github.com/cindyseptiagustiani20" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/cindysepti_20?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://gitlab.com/cindyseptiagustiani" target="_blank"><i class="fab fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/cindy-septi-agustiani/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-2 fixed bottom-0 w-full bg-[#1a1a1d] text-center text-[#C3073F] ml-[0px]">
+        <p>&copy; 2023 Cindy Septi Agustiani</p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        $(document).ready(function () {
+            $(".accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var panel = $(this).next();
+
+                if (panel.css("display") == "block") {
+                    panel.css("display", "none");
+                } else {
+                    panel.css("display", "block");
+                }
+
+                $(".accordion").not(this).removeClass("active");
+                $(".panel").not(panel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".sub-accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var subPanel = $(this).next();
+
+                if (subPanel.css("display") == "block") {
+                    subPanel.css("display", "none");
+                } else {
+                    subPanel.css("display", "block");
+                }
+
+                $(".sub-accordion").not(this).removeClass("active");
+                $(".sub-panel").not(subPanel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tablinks").first().addClass("active");
+            $(".tabcontent").first().css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
