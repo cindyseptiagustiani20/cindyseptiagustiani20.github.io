@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cindy Septi Agustiani's Blog | Struktur Data - Graf</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/blog/blog_style.css">
+    <link rel="icon" href="../../../assets/img/foto.png">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Struktur Data</h1>
+        <h2>8. Graf</h2>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Pengertian')">Pengertian</button>
+                <button class="tablinks" onclick="openCity(event, 'Unsur')">Unsur</button>
+                <button class="tablinks" onclick="openCity(event, 'Jenis')">Jenis</button>
+                <button class="tablinks" onclick="openCity(event, 'Representasi')">Representasi</button>
+                <button class="tablinks" onclick="openCity(event, 'Operasi')">Operasi</button>
+                <button class="tablinks" onclick="openCity(event, 'Aplikasi')">Aplikasi</button>
+
+            </div>
+
+            <div id="Pengertian" class="tabcontent">
+                <h3>Pengertian</h3>
+                <p>Graf adalah struktur data yang terdiri dari simpul-simpul (node) yang terhubung oleh sisi-sisi
+                    (edge). Graf digunakan untuk merepresentasikan hubungan antara objek-objek dalam bentuk jaringan
+                    yang kompleks. Setiap simpul dalam graf dapat memiliki beberapa sisi yang menghubungkannya dengan
+                    simpul-simpul lain.</p>
+
+                <p>Graf adalah kumpulan dari simpul dan busur yang secara matematis dinyatakan sebagai : </p>
+                <p>G = (V, E)</p>
+
+                <p>Dimana : </p>
+                <p>V = kumpulan simpul</p>
+                <p>E = kumpulan busur</p>
+
+                <p>Contoh graf : </p>
+                <div class="flex justify-center p-6">
+                    <img src="../../../assets/img/data_structure/graph/graph.png" alt="Graf" class="w-[300px] h-auto">
+                </div>
+            </div>
+
+            <div id="Unsur" class="tabcontent">
+                <h3>Unsur</h3>
+                <p>Unsur-unsur graf terdiri dari:</p>
+
+                <ul class="list-disc space-y-2 pl-4">
+                    <li>Simpul (node) adalah titik-titik yang terhubung oleh sisi-sisi.</li>
+                    <li>Sisi (edge) adalah garis yang menghubungkan dua simpul.</li>
+                </ul>
+
+            </div>
+
+            <div id="Jenis" class="tabcontent">
+                <h3>Jenis</h3>
+                <p>Berdasarkan arah sisi, graf dibagi menjadi dua jenis, yaitu:</p>
+
+                <button class="accordion">Graf Berarah</button>
+                <div class="panel">
+                    <p>Graf berarah adalah graf yang setiap sisi memiliki arah. Dalam graf berarah, sisi yang
+                        menghubungkan
+                        dua simpul memiliki arah yang menunjukkan simpul asal dan simpul tujuan.</p>
+
+                    <p>Contoh graf berarah : </p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/graph/directed_graph.png" alt="Graf Berarah"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="accordion">Graf Tidak Berarah</button>
+                <div class="panel">
+                    <p>Graf tidak berarah adalah graf yang setiap sisi tidak memiliki arah. Dalam graf tidak berarah,
+                        sisi
+                        yang menghubungkan dua simpul tidak memiliki arah.</p>
+
+                    <p>Contoh graf tidak berarah : </p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/graph/undirected_graph.png"
+                            alt="Graf Tidak Berarah" class="w-[300px] h-auto">
+                    </div>
+                </div>
+            </div>
+
+            <div id="Representasi" class="tabcontent">
+                <h3>Representasi</h3>
+                <p>Graf dapat direpresentasikan dengan dua cara, yaitu:</p>
+
+                <button class="sub-accordion">Matriks Ketetanggaan</button>
+                <div class="sub-panel">
+                    <p>Matriks ketetanggaan adalah matriks yang digunakan untuk merepresentasikan hubungan antara simpul dalam graf. Matriks ketetanggaan berukuran V x V, dimana V adalah jumlah simpul dalam graf. Baris i dan kolom j dari matriks ketetanggaan menunjukkan hubungan antara simpul i dan simpul j.
+                    </p>
+
+                    <p>Contoh matriks ketetanggaan : </p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/graph/adjacency_matrix.PNG"
+                            alt="Matriks Ketetanggaan" class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                <button class="sub-accordion">Daftar Ketetanggaan</button>
+                <div class="sub-panel">
+                    <p>Daftar ketetanggaan adalah daftar yang digunakan untuk merepresentasikan hubungan antara simpul
+                        dalam graf. Daftar ketetanggaan berisi daftar simpul-simpul yang terhubung dengan simpul
+                        tertentu.
+                    </p>
+
+                    <p>Contoh daftar ketetanggaan : </p>
+                    <div class="flex justify-center p-6">
+                        <img src="../../../assets/img/data_structure/graph/adjacency_list.png" alt="Daftar Ketetanggaan"
+                            class="w-[300px] h-auto">
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div id="Operasi" class="tabcontent">
+                <h3>Operasi</h3>
+                <p>Operasi-operasi yang dapat dilakukan pada graf, antara lain:</p>
+
+                <ul class="list-disc space-y-2 pl-4">
+                    <li>Menambahkan simpul</li>
+                    <li>Menghapus simpul</li>
+                    <li>Menambahkan sisi</li>
+                    <li>Menghapus sisi</li>
+                    <li>Menampilkan graf</li>
+                </ul>
+            </div>
+
+            <div id="Aplikasi" class="tabcontent">
+                <h3>Aplikasi</h3>
+                <p>Graf digunakan dalam berbagai bidang, antara lain:</p>
+
+                <ul class="list-disc space-y-2 pl-4">
+                    <li>Telekomunikasi</li>
+                    <li>Transportasi</li>
+                    <li>Ilmu komputer</li>
+                    <li>Biologi</li>
+                    <li>Kimia</li>
+                    <li>Matematika</li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="flex justify-center my-6">
+                    <img src="../../../assets/img/foto.png" alt="Cindy Septi Agustiani"
+                        class="rounded-full w-[150px] h-auto">
+                </div>
+                <p>Nama saya Cindy Septi Agustiani. Saya adalah mahasiswa Teknik Informatika di Sekolah Tinggi Teknologi
+                    Bandung.</p>
+                <br>
+                <div class="flex justify-center p-6">
+                    <a href="https://cindyseptiagustiani20.github.io/" target="_blank"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More About Me
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Another Post</h3>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Sorting</h4>
+                        <p>Feb 10, 2024</p>
+
+                        <p class="text-sm mb-4">Sorting adalah proses pengurutan data. Data yang diurutkan dapat berupa
+                            angka, huruf, atau objek lainnya. Sorting bertujuan untuk mengurutkan data dari yang
+                            terkecil hingga yang terbesar atau sebaliknya.</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/sorting"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-4">
+                    <div>
+                        <h4 class="text-[#C3073F]">Searching</h4>
+                        <p>Feb 10, 2024</p>
+
+                        <p class="text-sm mb-4">Searching adalah proses pencarian data. Data yang dicari dapat berupa
+                            angka, huruf, atau objek lainnya. Searching bertujuan untuk menemukan data yang dicari.</p>
+
+                        <a href="https://cindyseptiagustiani20.github.io/my_blog/data_structure/searching"
+                            class="text-[#FFFF] border border-[#C3073F] rounded-full px-2 py-1 text-sm hover:bg-[#C3073F] font-bold">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-center mt-6">
+                    <a href="https://cindyseptiagustiani20.github.io/my_blog"
+                        class="bg-[#C3073F] hover:bg-[#950740] text-white font-bold py-2 px-4 rounded-full">
+                        Show More Post
+                    </a>
+                </div>
+
+            </div>
+            <div class="card h-auto">
+                <h3>Follow Me</h3>
+
+                <div class="social-media flex justify-center pb-[50px]">
+                    <a href="https://github.com/cindyseptiagustiani20" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/cindysepti_20?utm_source=qr&igshid=OGU0MmVlOWVjOQ=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://gitlab.com/cindyseptiagustiani" target="_blank"><i class="fab fa-gitlab"></i></a>
+                    <a href="https://www.linkedin.com/in/cindy-septi-agustiani/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer py-2 fixed bottom-0 w-full bg-[#1a1a1d] text-center text-[#C3073F] ml-[0px]">
+        <p>&copy; 2023 Cindy Septi Agustiani</p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        $(document).ready(function () {
+            $(".accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var panel = $(this).next();
+
+                if (panel.css("display") == "block") {
+                    panel.css("display", "none");
+                } else {
+                    panel.css("display", "block");
+                }
+
+                $(".accordion").not(this).removeClass("active");
+                $(".panel").not(panel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".sub-accordion").click(function () {
+
+                $(this).toggleClass("active");
+
+                var subPanel = $(this).next();
+
+                if (subPanel.css("display") == "block") {
+                    subPanel.css("display", "none");
+                } else {
+                    subPanel.css("display", "block");
+                }
+
+                $(".sub-accordion").not(this).removeClass("active");
+                $(".sub-panel").not(subPanel).css("display", "none");
+
+            });
+        });
+
+        $(document).ready(function () {
+            $(".tablinks").first().addClass("active");
+            $(".tabcontent").first().css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
